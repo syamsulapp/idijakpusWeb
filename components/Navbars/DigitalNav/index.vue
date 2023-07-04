@@ -17,26 +17,97 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <NuxtLink to="/home-digital-agency" class="nav-link">
+              Beranda
+            </NuxtLink>
+          </li>
+          <li class="nav-item">
+            <NuxtLink to="/page-portfolio-5" class="nav-link">
+              Berita Dan Kegiatan
+            </NuxtLink>
+          </li>
           <li
             class="nav-item dropdown"
             @mousemove="handleMouseMove"
             @mouseleave="handleMouseLeave"
           >
             <a
-              class="nav-link active dropdown-toggle"
-              href="/"
-              id="navbarDropdown1"
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown2"
               role="button"
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              Beranda
+              Pelayanan
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
               <li>
-                <NuxtLink to="/home-digital-agency" class="dropdown-item"
-                  >Beranda</NuxtLink
+                <NuxtLink to="/page-about-5" class="dropdown-item"
+                  >Rekomendasi SIP</NuxtLink
                 >
+              </li>
+              <li>
+                <NuxtLink to="/page-product-5" class="dropdown-item"
+                  >Registrasi Anggota Baru/Ulang</NuxtLink
+                >
+              </li>
+              <li>
+                <NuxtLink to="/page-product-5" class="dropdown-item"
+                  >Pengajuan Rekomendasi Masuk PPDS
+                </NuxtLink>
+              </li>
+              <li>
+                <NuxtLink to="/page-product-5" class="dropdown-item"
+                  >Permohonan Mutasi Keluar IDI cab.Jakarta Pusat
+                </NuxtLink>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <NuxtLink to="/page-blog-5" class="nav-link"> Galeri </NuxtLink>
+          </li>
+          <li
+            class="nav-item dropdown"
+            @mousemove="handleMouseMove"
+            @mouseleave="handleMouseLeave"
+          >
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown2"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Berkas
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+              <li>
+                <NuxtLink to="/page-about-5" class="dropdown-item"
+                  >Surat Keputusan</NuxtLink
+                >
+              </li>
+              <li>
+                <NuxtLink to="/page-product-5" class="dropdown-item"
+                  >Surat Edaran</NuxtLink
+                >
+              </li>
+              <li>
+                <NuxtLink to="/page-product-5" class="dropdown-item"
+                  >Buku Dan Panduan
+                </NuxtLink>
+              </li>
+              <li>
+                <NuxtLink to="/page-product-5" class="dropdown-item"
+                  >Peraturan Bidang Kesehatan
+                </NuxtLink>
+              </li>
+              <li>
+                <NuxtLink to="/page-product-5" class="dropdown-item"
+                  >Panduan Penggunaan Aplikasi Simfoni
+                </NuxtLink>
               </li>
             </ul>
           </li>
@@ -53,31 +124,53 @@
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              Berita Dan Kegiatan
+              Tentang
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
               <li>
                 <NuxtLink to="/page-about-5" class="dropdown-item"
-                  >berita</NuxtLink
+                  >Profile Idi Cabang Jakarta Pusat</NuxtLink
                 >
               </li>
               <li>
                 <NuxtLink to="/page-product-5" class="dropdown-item"
-                  >kegiatan</NuxtLink
+                  >Sejarah Organisasi Kedokteran Indonesia</NuxtLink
                 >
+              </li>
+              <li>
+                <NuxtLink to="/page-product-5" class="dropdown-item"
+                  >Susunan Pengurus
+                </NuxtLink>
               </li>
             </ul>
           </li>
-          <li class="nav-item">
-            <NuxtLink to="/page-portfolio-5" class="nav-link">
-              portfolio
-            </NuxtLink>
-          </li>
-          <li class="nav-item">
-            <NuxtLink to="/page-blog-5" class="nav-link"> blog </NuxtLink>
-          </li>
-          <li class="nav-item">
-            <NuxtLink to="/page-contact-5" class="nav-link"> contact </NuxtLink>
+          <li
+            class="nav-item dropdown"
+            @mousemove="handleMouseMove"
+            @mouseleave="handleMouseLeave"
+          >
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown2"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Contact
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+              <li>
+                <NuxtLink to="/page-about-5" class="dropdown-item"
+                  >FAQ</NuxtLink
+                >
+              </li>
+              <li>
+                <NuxtLink to="/page-product-5" class="dropdown-item"
+                  >Hubungi Kami</NuxtLink
+                >
+              </li>
+            </ul>
           </li>
         </ul>
         <div class="nav-side">
@@ -86,24 +179,9 @@
               <i class="bi bi-telephone"></i>
             </div>
             <div class="cont">
-              <small class="text-muted m-0">hotline 24/7</small>
-              <h6>(+23) 5535 68 68</h6>
+              <small class="text-muted m-0">Contact IDI Jakpus</small>
+              <h6>(+62) 811-9110-189</h6>
             </div>
-          </div>
-          <div class="qoute-nav ps-4">
-            <a href="#" class="search-icon me-3">
-              <i class="bi bi-search"></i>
-            </a>
-            <a href="#" class="cart-icon me-3">
-              <i class="bi bi-cart"></i>
-              <span class="cart-num ms-1">2</span>
-            </a>
-            <NuxtLink
-              to="/page-contact-5"
-              class="btn sm-butn butn-gard border-0 text-white"
-            >
-              <span>Free Quote</span>
-            </NuxtLink>
           </div>
         </div>
       </div>

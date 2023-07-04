@@ -14,7 +14,7 @@ import ScrollToTop from "../components/ScrollToTop/index.vue";
 export default {
   components: {
     PreLoader,
-    ScrollToTop
+    ScrollToTop,
   },
   data() {
     return {
@@ -23,38 +23,46 @@ export default {
         "/home-digital-agency",
         "/home-digital-agency-onePage",
         "/home-it-solutions",
-        "/home-it-solutions-onePage"
-      ]
-    }
+        "/home-it-solutions-onePage",
+      ],
+    };
   },
   head() {
     return {
       link: [
-        { rel: 'stylesheet', href:'/assets/css/lib/bootstrap-icons.css' },
-        { rel: 'stylesheet', href:'/assets/css/lib/swiper.min.css' },
-        { rel: 'stylesheet', href:'/assets/css/lib/bootstrap.min.css' },
-        { rel: 'stylesheet', href:'/assets/css/lib/all.min.css' },
-        { rel: 'stylesheet', href:'/assets/css/lib/animate.css' },
-        { rel: 'stylesheet', href:'/assets/css/style.css' }
-      ]
-    }
+        { rel: "stylesheet", href: "/assets/css/lib/bootstrap-icons.css" },
+        { rel: "stylesheet", href: "/assets/css/lib/swiper.min.css" },
+        { rel: "stylesheet", href: "/assets/css/lib/bootstrap.min.css" },
+        { rel: "stylesheet", href: "/assets/css/lib/all.min.css" },
+        { rel: "stylesheet", href: "/assets/css/lib/animate.css" },
+        { rel: "stylesheet", href: "/assets/css/style.css" },
+      ],
+    };
   },
   mounted() {
     fixStylesheetsOrder(false);
 
     // Change 'ScrollToTop' component text in some pages
-    if (this.pagesWithScrollToTopText.indexOf(this.$router.history.current.path) !== -1) {
+    if (
+      this.pagesWithScrollToTopText.indexOf(
+        this.$router.history.current.path
+      ) !== -1
+    ) {
       this.scrollTopText = true;
     }
   },
   watch: {
     $route() {
-      if (this.pagesWithScrollToTopText.indexOf(this.$router.history.current.path) !== -1) {
+      if (
+        this.pagesWithScrollToTopText.indexOf(
+          this.$router.history.current.path
+        ) !== -1
+      ) {
         this.scrollTopText = true;
       } else {
         this.scrollTopText = false;
       }
-    }
-  }
-}
+    },
+  },
+};
 </script>

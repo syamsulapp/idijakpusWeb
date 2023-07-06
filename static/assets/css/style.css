@@ -70,15 +70,15 @@ TABLE OF CONTENTS:-
 ================================================================*/
 /* --------------- variable --------------- */
 :root {
-  --color-main:#0066ff;
-  --color-primary:#0066ff;
-  --color-secondary:#02b5ff;
-  --color-blue2: #4a00e1;
-  --color-blue4: #5842bc;
-  --color-blue5: #157efb;
+  --color-main:#eb2629;
+  --color-primary:#eb2629;
+  --color-secondary:#eb2629;
+  --color-blue2: #eb2629;
+  --color-blue4: #eb2629;
+  --color-blue5: #eb2629;
   --color-blue6: #6640f4;
-  --color-blue7: #8169f1;
-  --color-lightBlue:#15f1ff;
+  --color-blue7: #eb2629;
+  --color-lightBlue:#eb2629;
   --color-darkBlue:#010049;
   --color-darkBlue2:#1f227d;
   --color-orange1:#ff7a41;
@@ -90,7 +90,7 @@ TABLE OF CONTENTS:-
   --color-yellowGreen:#cef54b;
   --color-gray:#eef4f8;
   --color-gray2:#f0eff5;
-  --color-main-grad: linear-gradient(to right, #0c3df4 0%, #02b5ff 100%); }
+  --color-main-grad: linear-gradient(to right, #eb2629 0%, #eb2629 100%); }
 
 .color-main {
   color: var(--color-main) !important; }
@@ -1822,7 +1822,7 @@ small.text {
     .top-navbar.style-1 .top-links .text strong {
       margin: 0 10px; }
     .top-navbar.style-1 .top-links .text .fa-bullhorn {
-      background-color: #002ec1;
+      background-color: #950c0c;
       padding: 15px; }
   .top-navbar.style-1 .r-side {
     display: -webkit-box;

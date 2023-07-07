@@ -3,14 +3,14 @@
     <div class="container">
       <div :class="`section-head text-center mb-60 style-${styleType}`">
         <h2 class="mb-20">
-          {{ rtl ? "أخر" : "Our" }}
-          <span>{{ rtl ? "الأخبار" : "Journal" }}</span>
+          {{ rtl ? "أخر" : "Berita" }}
+          <span>{{ rtl ? "الأخبار" : "Terkini" }}</span>
         </h2>
         <div class="text color-666">
           {{
             rtl
               ? "احصل على اخر الاخبار من خلال المدونه ناقش وشارك الخبر مع الاصدقاء"
-              : "Get the latest articles from our journal, writing, discuss and share"
+              : "Memuat berita terbaru idi jakarta pusat"
           }}
         </div>
       </div>

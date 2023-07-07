@@ -6,12 +6,9 @@
           <div class="col-lg-4">
             <div class="foot_info">
               <a href="#" class="logo mb-3">
-                <img src="/assets/img/logo_cl.png" alt="" />
+                <img src="/assets/img/idi-logo.svg" alt="" />
               </a>
-              <div class="text mb-4">
-                Best IT Solutions & Technology WordPress <br />
-                Theme for Your Busines
-              </div>
+              <div class="text mb-4">Idi Jakarta Pusat</div>
               <ul class="mb-4">
                 <li class="d-flex">
                   <i class="bi bi-house me-3"></i>

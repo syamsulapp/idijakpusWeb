@@ -6,56 +6,78 @@
           <div class="col-lg-6">
             <div class="info">
               <div class="section-head mb-60">
-                <h6 class="color-main text-uppercase">Iteck agency</h6>
+                <h6 class="color-main text-uppercase">
+                  Idi Cabang Jakarta Pusat
+                </h6>
                 <h2>
-                  Technology & IT <span class="fw-normal">Solutions</span>
+                  Pelayanan Terintegrasi Dalam
+                  <span class="fw-normal">Satu Aplikasi</span>
                 </h2>
               </div>
               <div class="text">
-                We transform businesses of most major sectors with powerful and adaptable digital solutions that satisfy the needs of today.
+                Semua layanan terintegrasi dilakukan kedalam satu aplikasi
               </div>
               <div class="bttns mt-5">
                 <NuxtLink to="/page-services-5" class="btn btn-dark">
                   <span>our services</span>
                 </NuxtLink>
-                <a href="https://youtu.be/pGbIOC83-So?t=21" class="vid-btn" @click="openVideo">
+                <a
+                  href="https://youtu.be/pGbIOC83-So?t=21"
+                  class="vid-btn"
+                  @click="openVideo"
+                >
                   <i class="bi bi-play wow heartBeat infinite slow"></i>
-                  <span>Iteck’s <br /> Showreels</span>
+                  <span
+                    >Iteck’s <br />
+                    Showreels</span
+                  >
                 </a>
               </div>
             </div>
           </div>
           <div class="col-lg-5 offset-lg-1">
             <div class="img">
-              <img src="/assets/img/header/head.png" alt="" />
+              <img src="/assets/img/header/bannerIdiJakpus.png" alt="" />
             </div>
           </div>
         </div>
       </div>
     </div>
-    <img src="/assets/img/header/head_shape_r.png" alt="" class="head-shape-r wow" />
-    <img src="/assets/img/header/head_shape_l.png" alt="" class="head-shape-l wow" />
-    <ModalVideo channel="youtube" videoId="pGbIOC83-So" :isOpen.sync="videoIsOpen" />
+    <img
+      src="/assets/img/header/head_shape_r.png"
+      alt=""
+      class="head-shape-r wow"
+    />
+    <img
+      src="/assets/img/header/head_shape_l.png"
+      alt=""
+      class="head-shape-l wow"
+    />
+    <ModalVideo
+      channel="youtube"
+      videoId="pGbIOC83-So"
+      :isOpen.sync="videoIsOpen"
+    />
   </header>
 </template>
 
 <script>
-import ModalVideo from '../ModelVideo';
+import ModalVideo from "../ModelVideo";
 
 export default {
   components: {
-    ModalVideo
+    ModalVideo,
   },
   data() {
     return {
-      videoIsOpen: false
-    }
+      videoIsOpen: false,
+    };
   },
   methods: {
     openVideo(e) {
       e.preventDefault();
-      this.videoIsOpen = !this.videoIsOpen
-    }
+      this.videoIsOpen = !this.videoIsOpen;
+    },
   },
-}
+};
 </script>

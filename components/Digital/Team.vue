@@ -8,12 +8,19 @@
         </h2>
       </div>
       <div class="content">
-        <div class="team_box wow fadeInUp" v-for="(member, index) in teamMembers" :data-wow-delay='index * 0.2 + "s"' :key="index">
+        <div
+          class="team_box wow fadeInUp"
+          v-for="(member, index) in teamMembers"
+          :data-wow-delay="index * 0.2 + 's'"
+          :key="index"
+        >
           <div class="avatar">
             <img :src="member.picture" alt="" />
           </div>
           <div class="info">
-            <h6><a href="#">{{ member.name }}</a></h6>
+            <h6>
+              <a href="#">{{ member.name }}</a>
+            </h6>
             <small>{{ member.position }}</small>
             <div class="social_icons">
               <a href="#">
@@ -36,7 +43,10 @@
         <NuxtLink to="/page-about-5" class="btn btn-dark wow zoomIn me-2">
           <span>See All Team</span>
         </NuxtLink>
-        <NuxtLink to="/page-contact-5" class="btn butn-gard border-0 text-white wow zoomIn">
+        <NuxtLink
+          to="/page-contact-5"
+          class="btn butn-gard border-0 text-white wow zoomIn"
+        >
           <span>Join Our Team</span>
         </NuxtLink>
       </div>
@@ -46,13 +56,13 @@
 </template>
 
 <script>
-import teamMembers from '../../data/Digital/team.json'
+import teamMembers from "../../data/Digital/team.json";
 
 export default {
   data() {
     return {
-      teamMembers
-    }
+      teamMembers,
+    };
   },
-}
+};
 </script>

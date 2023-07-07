@@ -314,10 +314,10 @@ small.text {
   left: 0;
   height: 50%;
   width: 100%;
-  background: -webkit-gradient(linear, left top, right top, from(#0c3df4), to(#02b5ff));
-  background: -webkit-linear-gradient(left, #0c3df4 0%, #02b5ff 100%);
-  background: -o-linear-gradient(left, #0c3df4 0%, #02b5ff 100%);
-  background: linear-gradient(to right, #0c3df4 0%, #02b5ff 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#eb2629), to(#e85c5e));
+  background: -webkit-linear-gradient(left, #eb2629 0%, #e85c5e 100%);
+  background: -o-linear-gradient(left, #eb2629 0%, #e85c5e 100%);
+  background: linear-gradient(to right, #eb2629 0%, #e85c5e 100%);
   -webkit-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
   -o-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
   transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1); }

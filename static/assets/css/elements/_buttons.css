@@ -34,10 +34,10 @@
     width: 150%;
     height: 100%;
     z-index: 1;
-    background: -webkit-gradient(linear, left top, right top, color-stop(10%, #0c3df4), color-stop(45%, #02b5ff), color-stop(#02b5ff), to(#0c3df4));
-    background: -webkit-linear-gradient(left, #0c3df4 10%, #02b5ff 45%, #02b5ff, #0c3df4);
-    background: -o-linear-gradient(left, #0c3df4 10%, #02b5ff 45%, #02b5ff, #0c3df4);
-    background: linear-gradient(to right, #0c3df4 10%, #02b5ff 45%, #02b5ff, #0c3df4);
+    background: -webkit-gradient(linear, left top, right top, color-stop(10%, #eb2629), color-stop(45%, #e85c5e), color-stop(#e85c5e), to(#eb2629));
+    background: -webkit-linear-gradient(left, #eb2629 10%, #e85c5e 45%, #e85c5e, #eb2629);
+    background: -o-linear-gradient(left, #eb2629 10%, #e85c5e 45%, #e85c5e, #eb2629);
+    background: linear-gradient(to right, #eb2629 10%, #e85c5e 45%, #e85c5e, #eb2629);
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease; }

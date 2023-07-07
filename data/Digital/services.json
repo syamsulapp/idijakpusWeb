@@ -1,41 +1,41 @@
 [
   {
-    "title": "IT Consultation",
+    "title": "KRIP",
     "number": "01",
     "icon": "/assets/img/icons/serv_icons/1.png",
     "text": "Trust our top minds to eliminate workflow pain points, implement new tech & app.",
     "tags": ["Strategy", "Consultation", "Management"]
   },
   {
-    "title": "Data Security",
+    "title": "Izin Praktik",
     "number": "02",
     "icon": "/assets/img/icons/serv_icons/2.png",
     "text": "Trust our top minds to eliminate workflow pain points, implement new tech & app.",
     "tags": ["Management", "Backup & Recovery", "Transfer"]
   },
   {
-    "title": "Website Development",
+    "title": "Keanggotaan",
     "number": "03",
     "icon": "/assets/img/icons/serv_icons/3.png",
     "text": "Trust our top minds to eliminate workflow pain points, implement new tech & app.",
     "tags": ["Ecommerce", "Landing Page", "CMS", "Plugin"]
   },
   {
-    "title": "UI/UX Design",
+    "title": "Kompetensi",
     "number": "04",
     "icon": "/assets/img/icons/serv_icons/4.png",
     "text": "Trust our top minds to eliminate workflow pain points, implement new tech & app.",
     "tags": ["Website", "Mobile App"]
   },
   {
-    "title": "Cloud Services",
+    "title": "STR",
     "number": "05",
     "icon": "/assets/img/icons/serv_icons/5.png",
     "text": "Trust our top minds to eliminate workflow pain points, implement new tech & app.",
     "tags": ["Cloud Storerage", "Hosting & VPS"]
   },
   {
-    "title": "Game Development",
+    "title": "Studi Kasus",
     "number": "06",
     "icon": "/assets/img/icons/serv_icons/6.png",
     "text": "Trust our top minds to eliminate workflow pain points, implement new tech & app.",

@@ -6,17 +6,26 @@
           <div class="section-head mb-60">
             <h6 class="color-main text-uppercase wow fadeInUp">our services</h6>
             <h2 class="wow fadeInUp">
-              Perfect IT Solutions <span class="fw-normal">For Your Business</span>
+              Pelayanan <span class="fw-normal">Idi Jakarta Pusat</span>
             </h2>
           </div>
         </div>
       </div>
       <div class="content">
         <div class="row">
-          <div class="col-lg-4" v-for="(service, index) in services" :key="index">
-            <div class="service-box mb-4 wow fadeInUp" :data-wow-delay="index * 0.2 + 's'">
+          <div
+            class="col-lg-4"
+            v-for="(service, index) in services"
+            :key="index"
+          >
+            <div
+              class="service-box mb-4 wow fadeInUp"
+              :data-wow-delay="index * 0.2 + 's'"
+            >
               <h5>
-                <NuxtLink to="/page-services-5">{{ service.title }}</NuxtLink>
+                <a href="https://m.idijakpus.or.id/login" target="_blank">{{
+                  service.title
+                }}</a>
                 <span class="num">{{ service.number }}</span>
               </h5>
               <div class="icon">
@@ -27,7 +36,13 @@
                   {{ service.text }}
                 </div>
                 <div class="tags">
-                  <a href="#" class="me-1" v-for="(tag, i) in service.tags" :key="i">{{ tag }}</a>
+                  <a
+                    href="#"
+                    class="me-1"
+                    v-for="(tag, i) in service.tags"
+                    :key="i"
+                    >{{ tag }}</a
+                  >
                 </div>
               </div>
             </div>

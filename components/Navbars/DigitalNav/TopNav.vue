@@ -8,7 +8,12 @@
               <div class="text text-white">
                 <i class="fas fa-bullhorn"></i>
                 <strong>Now Hiring:</strong>
-                <span>Are you a driven and motivated <a href="#" class="p-0"><u>1st Line IT Support Engineer?</u></a></span>
+                <span
+                  >Are you a driven and motivated
+                  <a href="#" class="p-0"
+                    ><u>1st Line IT Support Engineer?</u></a
+                  ></span
+                >
               </div>
             </div>
           </div>
@@ -28,8 +33,19 @@
                   <i class="fab fa-instagram"></i>
                 </a>
               </div>
-              <div class="dropdown" @mousemove="handleMouseMove" @mouseleave="handleMouseLeave">
-                <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+              <div
+                class="dropdown"
+                @mousemove="handleMouseMove"
+                @mouseleave="handleMouseLeave"
+              >
+                <a
+                  class="dropdown-toggle"
+                  href="#"
+                  role="button"
+                  id="dropdownMenuLink"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
                   <img class="me-1" src="/assets/img/lang.png" alt="" /> English
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -49,20 +65,24 @@
 export default {
   methods: {
     handleMouseMove(event) {
-      const dropDownToggler = event.target.classList.contains('dropdown-toggle') ? event.target : event.target.querySelector('.dropdown-toggle');
+      const dropDownToggler = event.target.classList.contains("dropdown-toggle")
+        ? event.target
+        : event.target.querySelector(".dropdown-toggle");
       const dropDownMenu = dropDownToggler?.nextElementSibling;
 
-      dropDownToggler?.classList?.add('show');
-      dropDownMenu?.classList?.add('show');
+      dropDownToggler?.classList?.add("show");
+      dropDownMenu?.classList?.add("show");
     },
     handleMouseLeave(event) {
-      const dropdown = event.target.classList.contains('dropdown') ? event.target : event.target.closest('.dropdown');
-      const dropDownToggler = dropdown.querySelector('.dropdown-toggle');
-      const dropDownMenu = dropdown.querySelector('.dropdown-menu');
+      const dropdown = event.target.classList.contains("dropdown")
+        ? event.target
+        : event.target.closest(".dropdown");
+      const dropDownToggler = dropdown.querySelector(".dropdown-toggle");
+      const dropDownMenu = dropdown.querySelector(".dropdown-menu");
 
-      dropDownToggler?.classList?.remove('show');
-      dropDownMenu?.classList?.remove('show');
-    }
-  }
-}
+      dropDownToggler?.classList?.remove("show");
+      dropDownMenu?.classList?.remove("show");
+    },
+  },
+};
 </script>

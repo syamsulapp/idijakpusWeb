@@ -32,7 +32,7 @@ import Contact from "../../components/Digital/Contact";
 import Footer from "../../components/Digital/Footer";
 
 export default {
-  name: "HomeDigitalAgency",
+  name: "idijakartapusat",
   layout: "Main",
   components: {
     TopNav,
@@ -50,7 +50,7 @@ export default {
   },
   head() {
     return {
-      titleTemplate: "%s - Digital Agency",
+      titleTemplate: "IDI Cabang Jakarta Pusat",
     };
   },
 };

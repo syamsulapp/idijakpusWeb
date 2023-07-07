@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand-lg navbar-light style-1" ref="navbarRef">
     <div class="container">
       <a class="navbar-brand" href="#">
-        <img src="/assets/img/logo_cd.png" alt="" />
+        <img src="/assets/img/idi-logo.svg" alt="" />
       </a>
       <button
         class="navbar-toggler"

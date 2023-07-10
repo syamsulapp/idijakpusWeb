@@ -16,10 +16,10 @@
       </div>
       <div class="blog-details-slider">
         <swiper class="swiper-container" :options="swiperOptions">
-          <swiper-slide v-for="(slide, index) in data" :key="index">
+          <swiper-slide v-for="(berita, index) in data" :key="index.id">
             <div class="content-card">
               <div class="img overlay">
-                <img :src="slide.image" alt="" />
+                <img :src="berita.article_img" alt="" />
               </div>
               <div class="info">
                 <div class="row">
@@ -29,11 +29,11 @@
                         <a
                           href="#"
                           class="text-uppercase border-end brd-gray pe-3 me-3"
-                          >{{ slide.type }}</a
+                          >{{ berita.article_category }}</a
                         >
                         <i class="far fa-clock me-2"></i
                         >{{ rtl ? "موعد النشر" : "Posted on" }}
-                        <a href="#">{{ slide.time }}</a>
+                        <a href="#">{{ berita.article_publish_datetime }}</a>
                       </small>
                       <h2 class="title">
                         <NuxtLink
@@ -43,11 +43,11 @@
                               : '/page-single-post-5'
                           "
                         >
-                          {{ slide.title }}
+                          {{ berita.article_title }}
                         </NuxtLink>
                       </h2>
                       <p class="fs-13px mt-10 text-light text-info">
-                        {{ slide.desc }} [...]
+                        {{ berita.article_category }} [...]
                       </p>
                     </div>
                   </div>
@@ -67,9 +67,8 @@
 </template>
 
 <script>
-import slides from "../../data/Blog/slides.json";
 import slidesRTL from "../../data/Blog/slides-rtl.json";
-
+import axios from "axios";
 export default {
   props: ["rtl", "styleType"],
   data() {
@@ -94,11 +93,33 @@ export default {
         },
         loop: true,
       },
+      berita: {
+        isLoading: false,
+        data: null,
+      },
     };
+  },
+
+  mounted() {
+    this.getBerita();
   },
   computed: {
     data() {
-      return this.rtl ? slidesRTL : slides;
+      return this.rtl ? slidesRTL : this.berita.data;
+    },
+  },
+
+  methods: {
+    async getBerita() {
+      try {
+        this.berita.isLoading = true;
+        const { data } = await axios.get(
+          "https://dev-api.idijakpus.or.id/web/berita"
+        );
+        this.berita.data = data.data;
+      } finally {
+        this.berita.isLoading = false;
+      }
     },
   },
 };

@@ -14,6 +14,7 @@
       <!-- <Testimonials /> -->
       <!-- <Team /> -->
       <Blog />
+      <Webinar />
       <!-- <Contact /> -->
     </main>
     <Footer />
@@ -32,6 +33,7 @@ import Portfolio from "../../components/Digital/Portfolio";
 // import Testimonials from "../../components/Digital/Testimonials";
 // import Team from "../../components/Digital/Team";
 import Blog from "../../components/Digital/Blog";
+import Webinar from "../../components/Digital/Webinar";
 // import Contact from "../../components/Digital/Contact";
 import Footer from "../../components/Digital/Footer";
 
@@ -51,6 +53,7 @@ export default {
     // Team,
     Blog,
     // Contact,
+    Webinar,
     Footer,
   },
   head() {

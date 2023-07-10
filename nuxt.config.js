@@ -68,7 +68,11 @@ export default {
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [["vue-scrollto/nuxt", { duration: 1000 }]],
+  modules: ["@nuxtjs/axios", ["vue-scrollto/nuxt", { duration: 1000 }]],
+
+  axios: {
+    baseURL: process.env.API_URL,
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

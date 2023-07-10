@@ -18,9 +18,13 @@
                 Semua layanan terintegrasi dilakukan kedalam satu aplikasi
               </div>
               <div class="bttns mt-5">
-                <NuxtLink to="/page-services-5" class="btn btn-dark">
-                  <span>our services</span>
-                </NuxtLink>
+                <a
+                  href="https://m.idijakpus.or.id"
+                  class="btn btn-dark"
+                  target="_blank"
+                >
+                  <span>Open APP</span>
+                </a>
                 <a
                   href="https://youtu.be/pGbIOC83-So?t=21"
                   class="vid-btn"

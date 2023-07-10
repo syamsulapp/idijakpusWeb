@@ -17,37 +17,29 @@
       <div class="content wow fadeIn slow">
         <div class="portfolio-slider">
           <swiper class="swiper-container" :options="swiperOptions">
-            <swiper-slide v-for="(portfolio, index) in portfolios" :key="index">
+            <swiper-slide v-for="(kegiatan, index) in data" :key="index">
               <div class="portfolio-card">
                 <div class="img">
-                  <img :src="portfolio.image" alt="" />
+                  <img :src="imgHandler(kegiatan)" alt="" />
                 </div>
                 <div class="info">
                   <h5>
                     <NuxtLink to="/page-single-project-5">
-                      {{ portfolio.title }}
+                      {{ kegiatan.article_title }}
                     </NuxtLink>
                   </h5>
                   <small class="d-block color-main text-uppercase">
-                    <a
-                      href="#"
-                      v-for="(type, i) in portfolio.types"
-                      class="me-1"
-                      :key="i"
-                      >{{ type }}</a
-                    >
+                    <a href="#" class="me-1" :key="i">{{
+                      kegiatan.article_category
+                    }}</a>
                   </small>
                   <div class="text">
-                    {{ portfolio.text }}
+                    {{ kegiatan.article_title }}
                   </div>
                   <div class="tags">
-                    <a
-                      href="#"
-                      class="me-1"
-                      v-for="(tag, i) in portfolio.tags"
-                      :key="i"
-                      >{{ tag }}</a
-                    >
+                    <a href="#" class="me-1" :key="i">{{
+                      kegiatan.article_category
+                    }}</a>
                   </div>
                 </div>
               </div>
@@ -65,12 +57,11 @@
 </template>
 
 <script>
-import portfolios from "../../data/Digital/portfolio.json";
+import axios from "axios";
 
 export default {
   data() {
     return {
-      portfolios,
       swiperOptions: {
         slidesPerView: 3,
         spaceBetween: 30,
@@ -106,7 +97,47 @@ export default {
           },
         },
       },
+      kegiatan: {
+        isLoading: false,
+        data: null,
+      },
     };
+  },
+
+  mounted() {
+    this.getKegiatan();
+  },
+
+  computed: {
+    imgHandler() {
+      return (item) => {
+        if (item.article_img) {
+          if (item.article_img.includes("https")) {
+            return item.article_img;
+          } else {
+            return require("../../static/assets/img/no-image.png");
+          }
+        }
+        return require("../../static/assets/img/no-image.png");
+      };
+    },
+    data() {
+      return this.kegiatan.data;
+    },
+  },
+
+  methods: {
+    async getKegiatan() {
+      try {
+        this.kegiatan.isLoading = true;
+        const { data } = await axios.get(
+          "https://dev-api.idijakpus.or.id/web/kegiatan"
+        );
+        this.kegiatan.data = data.data;
+      } finally {
+        this.kegiatan.isLoading = false;
+      }
+    },
   },
 };
 </script>

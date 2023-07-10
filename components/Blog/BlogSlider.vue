@@ -19,7 +19,7 @@
           <swiper-slide v-for="(berita, index) in data" :key="index.id">
             <div class="content-card">
               <div class="img overlay">
-                <img :src="berita.article_img" alt="" />
+                <img :src="imgHandler(berita)" alt="" />
               </div>
               <div class="info">
                 <div class="row">
@@ -104,6 +104,18 @@ export default {
     this.getBerita();
   },
   computed: {
+    imgHandler() {
+      return (item) => {
+        if (item.article_img) {
+          if (item.article_img.includes("https")) {
+            return item.article_img;
+          } else {
+            return require("../../static/assets/img/no-image.png");
+          }
+        }
+        return require("../../static/assets/img/no-image.png");
+      };
+    },
     data() {
       return this.rtl ? slidesRTL : this.berita.data;
     },

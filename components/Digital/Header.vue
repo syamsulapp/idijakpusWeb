@@ -28,8 +28,8 @@
                 >
                   <i class="bi bi-play wow heartBeat infinite slow"></i>
                   <span
-                    >Iteck’s <br />
-                    Showreels</span
+                    >Jakpus Video<br />
+                    Reels</span
                   >
                 </a>
               </div>

@@ -15,39 +15,33 @@
       <div class="content">
         <div class="blog_slider">
           <swiper class="swiper-container" :options="swiperOptions">
-            <swiper-slide v-for="(blog, index) in blogs" :key="index">
+            <swiper-slide v-for="(krip, index) in data" :key="index">
               <div
                 class="blog_box"
                 @mousemove="showDetails"
                 @mouseleave="hideDetails"
               >
                 <div class="tags">
-                  <a href="#">{{ blog.type }}</a>
+                  <a href="#">{{ krip.kripjadwal_status }}</a>
                 </div>
                 <div class="img">
-                  <img :src="blog.cover" alt="" />
+                  <img :src="imgHandler" alt="" />
                 </div>
                 <div class="info">
                   <h6>
-                    <NuxtLink to="/page-single-post-5">{{
-                      blog.title
-                    }}</NuxtLink>
+                    <a href="https://m.idijakpus.or.id" target="_blank">
+                      {{ krip.kripjadwal_tempat }}
+                    </a>
                   </h6>
                   <div class="auther">
                     <span>
-                      <img class="auther-img" :src="blog.userPic" alt="" />
-                      <small
-                        ><a href="#">By {{ blog.user }}</a></small
-                      >
-                    </span>
-                    <span>
                       <i class="bi bi-calendar2"></i>
                       <small
-                        ><a href="#">{{ blog.date }}</a></small
+                        ><a href="#">{{ krip.kripjadwal_tanggal }}</a></small
                       >
                     </span>
                   </div>
-                  <div class="text">{{ blog.details }} [...]</div>
+                  <div class="text">{{ krip.kripjadwal_tempat }} [...]</div>
                 </div>
               </div>
             </swiper-slide>
@@ -63,6 +57,7 @@
 
 <script>
 import blogs from "../../data/Digital/blog.json";
+import axios from "axios";
 
 export default {
   data() {
@@ -102,7 +97,24 @@ export default {
           },
         },
       },
+      krip: {
+        isLoading: false,
+        data: null,
+      },
     };
+  },
+
+  mounted() {
+    this.getDataKrip();
+  },
+
+  computed: {
+    data() {
+      return this.krip.data;
+    },
+    imgHandler() {
+      return require("../../static/assets/img/krip.png");
+    },
   },
   methods: {
     showDetails(event) {
@@ -112,6 +124,18 @@ export default {
     hideDetails(event) {
       const detailsEl = event.currentTarget.querySelector(".text");
       detailsEl.style.display = "none";
+    },
+
+    async getDataKrip() {
+      try {
+        this.krip.isLoading = true;
+        const { data } = await axios.get(
+          "https://dev-api.idijakpus.or.id/web/jadwal_krip"
+        );
+        this.krip.data = data.data;
+      } finally {
+        this.krip.isLoading = false;
+      }
     },
   },
 };

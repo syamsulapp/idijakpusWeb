@@ -33,26 +33,6 @@
                   <i class="fab fa-instagram"></i>
                 </a>
               </div>
-              <div
-                class="dropdown"
-                @mousemove="handleMouseMove"
-                @mouseleave="handleMouseLeave"
-              >
-                <a
-                  class="dropdown-toggle"
-                  href="#"
-                  role="button"
-                  id="dropdownMenuLink"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  <img class="me-1" src="/assets/img/lang.png" alt="" /> English
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                  <li><a class="dropdown-item" href="#">French</a></li>
-                  <li><a class="dropdown-item" href="#">Arabic</a></li>
-                </ul>
-              </div>
             </div>
           </div>
         </div>

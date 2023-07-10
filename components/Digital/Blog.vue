@@ -35,6 +35,12 @@
                   </h6>
                   <div class="auther">
                     <span>
+                      <i class="bi bi-tags"></i>
+                      <small>
+                        <a href="#" class="me-1">{{ "KRIP" }}</a>
+                      </small>
+                    </span>
+                    <span>
                       <i class="bi bi-calendar2"></i>
                       <small
                         ><a href="#">{{ krip.kripjadwal_tanggal }}</a></small

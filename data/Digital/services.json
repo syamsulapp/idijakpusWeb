@@ -3,14 +3,14 @@
     "title": "KRIP",
     "number": "01",
     "icon": "/assets/img/icons/serv_icons/1.png",
-    "text": "Trust our top minds to eliminate workflow pain points, implement new tech & app.",
+    "text": "Pembekalan dokter.",
     "tags": ["Strategy", "Consultation", "Management"]
   },
   {
     "title": "Izin Praktik",
     "number": "02",
     "icon": "/assets/img/icons/serv_icons/2.png",
-    "text": "Trust our top minds to eliminate workflow pain points, implement new tech & app.",
+    "text": "Rekomendasi Izin Praktik.",
     "tags": ["Management", "Backup & Recovery", "Transfer"]
   },
   {

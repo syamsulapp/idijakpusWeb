@@ -24,7 +24,7 @@
                 </div>
                 <div class="info">
                   <h5>
-                    <NuxtLink to="/page-single-project-5">
+                    <NuxtLink to="/page-single-post-5">
                       {{ kegiatan.article_title }}
                     </NuxtLink>
                   </h5>

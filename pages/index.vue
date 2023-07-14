@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import digitalAgency from "../pages/home-digital-agency";
+import digitalAgency from "../pages/home";
 
 export default {
   name: "idi_jakarta_pusat",

@@ -12,29 +12,29 @@
 
 <script>
 import navbarScrollEffect from "../../common/navbarScrollEffect";
-import TopNav from '../../components/Navbars/TopNav';
-import Navbar from '../../components/Navbars/SaasNav';
-import AllNews from '../../components/SinglePost/AllNews';
-import PopularPosts from '../../components/SinglePost/PopularPosts';
-import Footer from '../../components/Saas/Footer';
+import TopNav from "../../components/Navbars/TopNav";
+import Navbar from "../../components/Navbars/SaasNav";
+import AllNews from "../../components/SinglePost/AllNews";
+import PopularPosts from "../../components/SinglePost/PopularPosts";
+import Footer from "../../components/Saas/Footer";
 
 export default {
-  name: 'PageSinglePost5',
+  name: "PageSinglePost5",
   layout: "Main",
   components: {
     TopNav,
     Navbar,
     AllNews,
     PopularPosts,
-    Footer
+    Footer,
   },
   head() {
     return {
       titleTemplate: "%s - Page Single Post 5",
-    }
+    };
   },
   mounted() {
     navbarScrollEffect(this.$refs.navbarRef.$el);
-  }
-}
+  },
+};
 </script>

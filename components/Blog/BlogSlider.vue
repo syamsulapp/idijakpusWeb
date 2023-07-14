@@ -40,7 +40,7 @@
                           :to="
                             rtl
                               ? '/rtl-page-single-post'
-                              : '/page-single-post-5'
+                              : `/home/berita/${berita.id}`
                           "
                         >
                           {{ berita.article_title }}

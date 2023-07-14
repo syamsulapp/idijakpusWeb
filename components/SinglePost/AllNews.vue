@@ -7,8 +7,14 @@
         :rtl="rtl"
       />
       <div class="row gx-4 gx-lg-5">
-        <Sidebar v-if="!isWide && leftSidebar" :data="data.sidebar" :leftSidebar="leftSidebar" :styleType="styleType" :rtl="rtl" />
-        <div :class='isWide ? "col-lg-12" : "col-lg-8"'>
+        <Sidebar
+          v-if="!isWide && leftSidebar"
+          :data="data.sidebar"
+          :leftSidebar="leftSidebar"
+          :styleType="styleType"
+          :rtl="rtl"
+        />
+        <div :class="isWide ? 'col-lg-12' : 'col-lg-8'">
           <Metadata :metadata="metadata" :rtl="rtl" />
           <div class="blog-content-info">
             <Content :styleType="styleType" :rtl="rtl" />
@@ -20,7 +26,13 @@
             />
           </div>
         </div>
-        <Sidebar v-if="!isWide && !leftSidebar" :data="data.sidebar" :leftSidebar="leftSidebar" :styleType="styleType" :rtl="rtl" />
+        <Sidebar
+          v-if="!isWide && !leftSidebar"
+          :data="data.sidebar"
+          :leftSidebar="leftSidebar"
+          :styleType="styleType"
+          :rtl="rtl"
+        />
       </div>
     </div>
   </section>
@@ -37,11 +49,11 @@ import news from "../../data/SinglePost/all-news.json";
 import newsRTL from "../../data/SinglePost/all-news-rtl.json";
 
 export default {
-  props: ['rtl', 'styleType', 'isWide', 'leftSidebar'],
+  props: ["rtl", "styleType", "isWide", "leftSidebar"],
   data() {
     return {
-      data: this.rtl ? newsRTL : news
-    }
+      data: this.rtl ? newsRTL : news,
+    };
   },
   computed: {
     metadata() {
@@ -50,15 +62,15 @@ export default {
         user: this.data.user,
         commentsCount: this.data.commentsCount,
         viewsCount: this.data.viewsCount,
-      }
-    }
+      };
+    },
   },
   components: {
     Details,
     Metadata,
     Content,
     Comments,
-    Sidebar
-  }
-}
+    Sidebar,
+  },
+};
 </script>

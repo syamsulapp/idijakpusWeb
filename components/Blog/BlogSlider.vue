@@ -37,11 +37,7 @@
                       </small>
                       <h2 class="title">
                         <NuxtLink
-                          :to="
-                            rtl
-                              ? '/rtl-page-single-post'
-                              : `/home/berita/${berita.id}`
-                          "
+                          :to="rtl ? '/rtl-page-single-post' : `/home/berita`"
                         >
                           {{ berita.article_title }}
                         </NuxtLink>

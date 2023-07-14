@@ -12,11 +12,11 @@
 
 <script>
 import navbarScrollEffect from "../../../common/navbarScrollEffect";
-import TopNav from "../../../components/Navbars/TopNav";
-import Navbar from "../../../components/Navbars/SaasNav";
+import TopNav from "../../../components/Navbars/DigitalNav/TopNav";
+import Navbar from "../../../components/Navbars/DigitalNav";
 import AllNews from "../../../components/SinglePost/AllNews";
 import PopularPosts from "../../../components/SinglePost/PopularPosts";
-import Footer from "../../../components/Saas/Footer";
+import Footer from "../../../components/Digital/Footer";
 
 export default {
   name: "PageSinglePost5",

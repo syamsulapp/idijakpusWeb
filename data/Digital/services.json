@@ -4,41 +4,41 @@
     "number": "01",
     "icon": "/assets/img/icons/serv_icons/1.png",
     "text": "Pembekalan dokter.",
-    "tags": ["Strategy", "Consultation", "Management"]
+    "tags": ["KRIP"]
   },
   {
     "title": "Izin Praktik",
     "number": "02",
     "icon": "/assets/img/icons/serv_icons/2.png",
     "text": "Rekomendasi Izin Praktik.",
-    "tags": ["Management", "Backup & Recovery", "Transfer"]
+    "tags": ["Izin Praktik"]
   },
   {
     "title": "Keanggotaan",
     "number": "03",
     "icon": "/assets/img/icons/serv_icons/3.png",
-    "text": "Trust our top minds to eliminate workflow pain points, implement new tech & app.",
-    "tags": ["Ecommerce", "Landing Page", "CMS", "Plugin"]
+    "text": "Daftar menjadi anggota idi jakpus dengan mengisi form yang ada di aplikasi simfoni.",
+    "tags": ["Registrasi", "Mutasi Masuk", "Mutasi Keluar"]
   },
   {
     "title": "Kompetensi",
     "number": "04",
     "icon": "/assets/img/icons/serv_icons/4.png",
-    "text": "Trust our top minds to eliminate workflow pain points, implement new tech & app.",
-    "tags": ["Website", "Mobile App"]
+    "text": "kompentensi dokter.",
+    "tags": ["Kompetensi", "Serkom"]
   },
   {
     "title": "STR",
     "number": "05",
     "icon": "/assets/img/icons/serv_icons/5.png",
-    "text": "Trust our top minds to eliminate workflow pain points, implement new tech & app.",
-    "tags": ["Cloud Storerage", "Hosting & VPS"]
+    "text": "surat tanda rekomendasi.",
+    "tags": ["STR"]
   },
   {
     "title": "Studi Kasus",
     "number": "06",
     "icon": "/assets/img/icons/serv_icons/6.png",
-    "text": "Trust our top minds to eliminate workflow pain points, implement new tech & app.",
-    "tags": ["Unity 2D/3D", "VR/AR", "iOS & Android", "HTC Vive"]
+    "text": "berisikan forum terkait pelayanan idi jakarta pusat.",
+    "tags": ["Forum"]
   }
 ]

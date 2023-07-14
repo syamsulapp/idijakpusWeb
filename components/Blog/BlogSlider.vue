@@ -1,7 +1,7 @@
 <template>
   <section class="blog-slider pt-50 pb-50 style-1">
     <div class="container">
-      <div :class="`section-head text-center mb-60 style-${styleType}`">
+      <!-- <div :class="`section-head text-center mb-60 style-${styleType}`">
         <h2 class="mb-20">
           {{ rtl ? "أخر" : "Berita" }}
           <span>{{ rtl ? "الأخبار" : "Terkini" }}</span>
@@ -13,7 +13,7 @@
               : "Memuat berita terbaru idi jakarta pusat"
           }}
         </div>
-      </div>
+      </div> -->
       <div class="blog-details-slider">
         <swiper class="swiper-container" :options="swiperOptions">
           <swiper-slide v-for="(berita, index) in data" :key="index.id">

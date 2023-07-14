@@ -21,8 +21,8 @@
             <NuxtLink to="/home" class="nav-link"> Beranda </NuxtLink>
           </li>
           <li class="nav-item">
-            <NuxtLink to="/beritaDanKegiatan" class="nav-link">
-              Berita Dan Kegiatan
+            <NuxtLink to="/berita-kegiatan" class="nav-link">
+              berita-kegiatan
             </NuxtLink>
           </li>
           <li
@@ -159,9 +159,7 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
               <li>
-                <NuxtLink to="/" class="dropdown-item"
-                  >FAQ</NuxtLink
-                >
+                <NuxtLink to="/" class="dropdown-item">FAQ</NuxtLink>
               </li>
               <li>
                 <NuxtLink to="/contact" class="dropdown-item"

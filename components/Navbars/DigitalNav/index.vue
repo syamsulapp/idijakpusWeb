@@ -18,9 +18,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <NuxtLink to="/home-digital-agency" class="nav-link">
-              Beranda
-            </NuxtLink>
+            <NuxtLink to="/home" class="nav-link"> Beranda </NuxtLink>
           </li>
           <li class="nav-item">
             <NuxtLink to="/page-portfolio-5" class="nav-link">
@@ -44,22 +42,22 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
               <li>
-                <NuxtLink to="/page-about-5" class="dropdown-item"
+                <NuxtLink to="/services/sip" class="dropdown-item"
                   >Rekomendasi SIP</NuxtLink
                 >
               </li>
               <li>
-                <NuxtLink to="/page-product-5" class="dropdown-item"
+                <NuxtLink to="/services/anggotabaru" class="dropdown-item"
                   >Registrasi Anggota Baru/Ulang</NuxtLink
                 >
               </li>
               <li>
-                <NuxtLink to="/page-product-5" class="dropdown-item"
+                <NuxtLink to="/services/ppds" class="dropdown-item"
                   >Pengajuan Rekomendasi Masuk PPDS
                 </NuxtLink>
               </li>
               <li>
-                <NuxtLink to="/page-product-5" class="dropdown-item"
+                <NuxtLink to="/services/mutasi" class="dropdown-item"
                   >Permohonan Mutasi Keluar IDI cab.Jakarta Pusat
                 </NuxtLink>
               </li>

@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import screenshots from '../../data/App/screenshots.json';
+import screenshots from "../../data/App/screenshots.json";
 
 export default {
   data() {
@@ -29,7 +29,7 @@ export default {
         keyboard: true,
         loop: true,
         autoplay: {
-          delay: 4000
+          delay: 4000,
         },
         speed: 1000,
         centeredSlides: true,
@@ -48,10 +48,10 @@ export default {
           },
           1200: {
             slidesPerView: 5,
-          }
-        }
-      }
-    }
+          },
+        },
+      },
+    };
   },
-}
+};
 </script>

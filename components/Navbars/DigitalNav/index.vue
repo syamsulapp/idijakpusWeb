@@ -21,7 +21,7 @@
             <NuxtLink to="/home" class="nav-link"> Beranda </NuxtLink>
           </li>
           <li class="nav-item">
-            <NuxtLink to="/page-portfolio-5" class="nav-link">
+            <NuxtLink to="/beritaDanKegiatan" class="nav-link">
               Berita Dan Kegiatan
             </NuxtLink>
           </li>

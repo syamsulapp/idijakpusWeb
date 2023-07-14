@@ -57,7 +57,8 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-2">
+          <!-- hide information footer-->
+          <!-- <div class="col-lg-2">
             <div class="links">
               <div class="cont">
                 <h6 class="link_title">Information</h6>
@@ -71,11 +72,11 @@
                 </ul>
               </div>
             </div>
-          </div>
+          </div> -->
           <div class="col-lg-4">
             <div class="foot_subscribe">
-              <h6 class="link_title">Newsletter</h6>
-              <p>Register now to get latest updates on promotions & coupons.</p>
+              <h6 class="link_title">Contact US</h6>
+              <p>Jika ada kendala silahkan tinggalkan email di kolom ini.</p>
               <div class="input-group my-4">
                 <input
                   type="text"
@@ -89,12 +90,12 @@
                   type="button"
                   id="button-addon2"
                 >
-                  <span>Subscribe</span>
+                  <span>Submit</span>
                 </button>
               </div>
               <p class="fst-italic">
-                By subscribing, you accepted the our
-                <a href="#" class="text-decoration-underline"> Policy</a>
+                Kirim pesan/contact anda terimakasih
+                <a href="/home" class="text-decoration-underline"> Layanan</a>
               </p>
             </div>
           </div>

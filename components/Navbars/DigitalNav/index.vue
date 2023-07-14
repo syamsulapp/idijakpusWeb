@@ -159,12 +159,12 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
               <li>
-                <NuxtLink to="/page-about-5" class="dropdown-item"
+                <NuxtLink to="/" class="dropdown-item"
                   >FAQ</NuxtLink
                 >
               </li>
               <li>
-                <NuxtLink to="/page-product-5" class="dropdown-item"
+                <NuxtLink to="/contact" class="dropdown-item"
                   >Hubungi Kami</NuxtLink
                 >
               </li>

@@ -4,7 +4,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "Iteck",
+    title: "Idi Cabang Jakarta Pusat",
     htmlAttrs: {
       lang: "en",
     },

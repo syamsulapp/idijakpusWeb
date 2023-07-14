@@ -58,7 +58,7 @@ export default {
   },
   head() {
     return {
-      titleTemplate: "IDI Cabang Jakarta Pusat",
+      titleTemplate: "%s - home",
     };
   },
 };

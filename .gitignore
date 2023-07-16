@@ -18,6 +18,3 @@ logs
 # Local env files
 .env.*
 !.env.example
-
-#static not push in repository
-static

@@ -31,9 +31,7 @@
                 >
               </small>
               <h5 class="fw-bold mt-10 title">
-                <NuxtLink
-                  :to="rtl ? '/rtl-page-single-post' : '/page-single-post-5'"
-                >
+                <NuxtLink :to="rtl ? '/rtl-page-single-post' : '/home/berita'">
                   {{ post.title }}
                 </NuxtLink>
               </h5>

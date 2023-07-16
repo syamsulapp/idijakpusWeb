@@ -22,7 +22,7 @@
           {{ rtl ? "المنشورات الاخيرة" : "recent post" }}
         </h6>
         <NuxtLink
-          :to="rtl ? '/rtl-page-single-post' : '/page-single-post-5'"
+          :to="rtl ? '/rtl-page-single-post' : '/home/berita'"
           v-for="(post, index) in sidebarData.recentPosts"
           :key="index"
           :class="`post-card ${

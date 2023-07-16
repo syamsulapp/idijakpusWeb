@@ -27,7 +27,7 @@
               <a href="#" class="op-8">{{ blog.time }}</a>
             </small>
             <NuxtLink
-              :to="rtl ? '/rtl-page-single-post' : '/page-single-post-5'"
+              :to="rtl ? '/rtl-page-single-post' : '/home/berita'"
               class="card-title mb-10"
             >
               {{ blog.title }}

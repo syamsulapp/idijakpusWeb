@@ -64,7 +64,7 @@
             </ul>
           </li>
           <li class="nav-item">
-            <NuxtLink to="/page-blog-5" class="nav-link"> Galeri </NuxtLink>
+            <NuxtLink to="/home" class="nav-link"> Galeri </NuxtLink>
           </li>
           <li
             class="nav-item dropdown"
@@ -83,27 +83,27 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
               <li>
-                <NuxtLink to="/page-about-5" class="dropdown-item"
+                <NuxtLink to="/home" class="dropdown-item"
                   >Surat Keputusan</NuxtLink
                 >
               </li>
               <li>
-                <NuxtLink to="/page-product-5" class="dropdown-item"
+                <NuxtLink to="/home" class="dropdown-item"
                   >Surat Edaran</NuxtLink
                 >
               </li>
               <li>
-                <NuxtLink to="/page-product-5" class="dropdown-item"
+                <NuxtLink to="/home" class="dropdown-item"
                   >Buku Dan Panduan
                 </NuxtLink>
               </li>
               <li>
-                <NuxtLink to="/page-product-5" class="dropdown-item"
+                <NuxtLink to="/home" class="dropdown-item"
                   >Peraturan Bidang Kesehatan
                 </NuxtLink>
               </li>
               <li>
-                <NuxtLink to="/page-product-5" class="dropdown-item"
+                <NuxtLink to="/home" class="dropdown-item"
                   >Panduan Penggunaan Aplikasi Simfoni
                 </NuxtLink>
               </li>
@@ -126,17 +126,17 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
               <li>
-                <NuxtLink to="/page-about-5" class="dropdown-item"
+                <NuxtLink to="/home" class="dropdown-item"
                   >Profile Idi Cabang Jakarta Pusat</NuxtLink
                 >
               </li>
               <li>
-                <NuxtLink to="/page-product-5" class="dropdown-item"
+                <NuxtLink to="/home" class="dropdown-item"
                   >Sejarah Organisasi Kedokteran Indonesia</NuxtLink
                 >
               </li>
               <li>
-                <NuxtLink to="/page-product-5" class="dropdown-item"
+                <NuxtLink to="/home" class="dropdown-item"
                   >Susunan Pengurus
                 </NuxtLink>
               </li>

@@ -18,7 +18,7 @@
       }
 
       .cls-3 {
-        fill: #0c3df4;
+        fill: #eb2629;
         fill-rule: evenodd;
         filter: url(#filter);
       }

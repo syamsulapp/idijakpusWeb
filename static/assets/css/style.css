@@ -665,10 +665,10 @@ small.text {
   left: 0;
   height: 50%;
   width: 100%;
-  background: -webkit-gradient(linear, left top, right top, from(#0c3df4), to(#02b5ff));
-  background: -webkit-linear-gradient(left, #0c3df4 0%, #02b5ff 100%);
-  background: -o-linear-gradient(left, #0c3df4 0%, #02b5ff 100%);
-  background: linear-gradient(to right, #0c3df4 0%, #02b5ff 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#eb2629), to(#e16c6c));
+  background: -webkit-linear-gradient(left, #eb2629 0%, #e16c6c 100%);
+  background: -o-linear-gradient(left, #eb2629 0%, #e16c6c 100%);
+  background: linear-gradient(to right, #eb2629 0%, #e16c6c 100%);
   -webkit-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
   -o-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
   transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1); }
@@ -1426,10 +1426,10 @@ small.text {
     width: 150%;
     height: 100%;
     z-index: 1;
-    background: -webkit-gradient(linear, left top, right top, color-stop(10%, #0c3df4), color-stop(45%, #02b5ff), color-stop(#02b5ff), to(#0c3df4));
-    background: -webkit-linear-gradient(left, #0c3df4 10%, #02b5ff 45%, #02b5ff, #0c3df4);
-    background: -o-linear-gradient(left, #0c3df4 10%, #02b5ff 45%, #02b5ff, #0c3df4);
-    background: linear-gradient(to right, #0c3df4 10%, #02b5ff 45%, #02b5ff, #0c3df4);
+    background: -webkit-gradient(linear, left top, right top, color-stop(10%, #eb2629), color-stop(45%, #e16c6c), color-stop(#e16c6c), to(#eb2629));
+    background: -webkit-linear-gradient(left, #eb2629 10%, #e16c6c 45%, #e16c6c, #eb2629);
+    background: -o-linear-gradient(left, #eb2629 10%, #e16c6c 45%, #e16c6c, #eb2629);
+    background: linear-gradient(to right, #eb2629 10%, #e16c6c 45%, #e16c6c, #eb2629);
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease; }
@@ -1822,7 +1822,7 @@ small.text {
     .top-navbar.style-1 .top-links .text strong {
       margin: 0 10px; }
     .top-navbar.style-1 .top-links .text .fa-bullhorn {
-      background-color: #002ec1;
+      background-color: #e16c6c;
       padding: 15px; }
   .top-navbar.style-1 .r-side {
     display: -webkit-box;

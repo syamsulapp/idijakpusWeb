@@ -30,7 +30,7 @@ export default {
   },
   head() {
     return {
-      titleTemplate: "%s - Page Single Post 5",
+      titleTemplate: "%s - Berita",
     };
   },
   mounted() {

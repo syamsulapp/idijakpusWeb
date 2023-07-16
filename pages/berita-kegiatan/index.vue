@@ -33,7 +33,7 @@ export default {
   },
   head() {
     return {
-      titleTemplate: "%s - Page Blog 5",
+      titleTemplate: "%s - Berita Dan kegiatan",
     };
   },
   mounted() {

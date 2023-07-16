@@ -30,7 +30,7 @@ export default {
   },
   head() {
     return {
-      titleTemplate: "%s - Page Contact 5",
+      titleTemplate: "%s - Hubungi Kami",
     };
   },
   mounted() {

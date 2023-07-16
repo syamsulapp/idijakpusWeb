@@ -30,7 +30,7 @@ export default {
   },
   head() {
     return {
-      titleTemplate: "%s - Page Single Project 5",
+      titleTemplate: "%s - Anggota Baru",
     };
   },
   mounted() {

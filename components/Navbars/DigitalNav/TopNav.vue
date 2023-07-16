@@ -9,9 +9,12 @@
                 <i class="fas fa-bullhorn"></i>
                 <strong>Now Hiring:</strong>
                 <span
-                  >Are you a driven and motivated
-                  <a href="#" class="p-0"
-                    ><u>1st Line IT Support Engineer?</u></a
+                  >Fitur Webinar Sudah Terbit Silahkan Cek
+                  <a
+                    href="https://m.idijakpus.or.id"
+                    class="p-0"
+                    target="_blank"
+                    ><u>Aplikasi Simfoni?</u></a
                   ></span
                 >
               </div>

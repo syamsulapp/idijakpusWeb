@@ -26,14 +26,14 @@
                   <span>Open APP</span>
                 </a>
                 <a
-                  href="https://youtu.be/pGbIOC83-So?t=21"
+                  href="https://youtu.be/nA1w1KpI7lM"
                   class="vid-btn"
                   @click="openVideo"
                 >
                   <i class="bi bi-play wow heartBeat infinite slow"></i>
                   <span
                     >Jakpus Video<br />
-                    Reels</span
+                    Simfoni</span
                   >
                 </a>
               </div>
@@ -59,7 +59,7 @@
     />
     <ModalVideo
       channel="youtube"
-      videoId="pGbIOC83-So"
+      videoId="nA1w1KpI7lM"
       :isOpen.sync="videoIsOpen"
     />
   </header>

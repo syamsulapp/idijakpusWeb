@@ -15,11 +15,11 @@ export default {
       {
         hid: "description",
         name: "description",
-        content: "Iteck - Multi-Purpose Vue.js Nuxt.js Template",
+        content: "Idijakpus Website Terbaru",
       },
       {
         name: "keywords",
-        content: "Vue Nuxtjs Template Iteck Multi-Purpose themeforest",
+        content: "Idijakpus Website Terbaru",
       },
       { name: "format-detection", content: "telephone=no" },
     ],

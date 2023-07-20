@@ -82,7 +82,7 @@ export default {
       try {
         this.anggota.isLoading = true;
         const { data } = await axios.get(
-          "https://dev-api.idijakpus.or.id/web/layanan/masuk_ppds"
+          "https://api.idijakpus.or.id/web/layanan/masuk_ppds"
         );
         this.anggota.data = data.data;
       } finally {

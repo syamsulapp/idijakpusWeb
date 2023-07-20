@@ -131,7 +131,7 @@ export default {
       try {
         this.kegiatan.isLoading = true;
         const { data } = await axios.get(
-          "https://dev-api.idijakpus.or.id/web/kegiatan"
+          "https://api.idijakpus.or.id/web/kegiatan"
         );
         this.kegiatan.data = data.data;
       } finally {

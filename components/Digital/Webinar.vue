@@ -146,7 +146,7 @@ export default {
       try {
         this.webinar.isLoading = true;
         const { data } = await axios.get(
-          "https://dev-api.idijakpus.or.id/web/webinar"
+          "https://api.idijakpus.or.id/web/webinar"
         );
         this.webinar.data = data.data;
       } finally {

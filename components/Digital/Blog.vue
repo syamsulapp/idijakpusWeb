@@ -136,7 +136,7 @@ export default {
       try {
         this.krip.isLoading = true;
         const { data } = await axios.get(
-          "https://dev-api.idijakpus.or.id/web/jadwal_krip"
+          "https://api.idijakpus.or.id/web/jadwal_krip"
         );
         this.krip.data = data.data;
       } finally {

@@ -122,7 +122,7 @@ export default {
       try {
         this.berita.isLoading = true;
         const { data } = await axios.get(
-          "https://dev-api.idijakpus.or.id/web/berita"
+          "https://api.idijakpus.or.id/web/berita"
         );
         this.berita.data = data.data;
       } finally {

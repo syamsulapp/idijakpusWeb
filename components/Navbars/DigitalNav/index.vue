@@ -64,7 +64,7 @@
             </ul>
           </li>
           <li class="nav-item">
-            <NuxtLink to="/home" class="nav-link"> Galeri </NuxtLink>
+            <NuxtLink to="/galeri" class="nav-link"> Galeri </NuxtLink>
           </li>
           <li
             class="nav-item dropdown"

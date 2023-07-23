@@ -7,6 +7,15 @@ export default {
     url: process.env.NUXT_ENV_URLIDI,
   },
 
+  router: {
+    extendRoutes(routes, resolve) {
+      routes.push({
+        name: "/berita/:id",
+        path: "/berita-detail",
+      });
+    },
+  },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: "Idi Cabang Jakarta Pusat",
@@ -70,7 +79,7 @@ export default {
   components: false,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [],
+  buildModules: ["@nuxtjs/router"],
   router: {
     prefetchLinks: false,
   },

@@ -57,7 +57,7 @@
 </template>
 
 <script>
-import axios from "axios";
+import apis from "../../src/api";
 
 export default {
   data() {
@@ -130,9 +130,7 @@ export default {
     async getKegiatan() {
       try {
         this.kegiatan.isLoading = true;
-        const { data } = await axios.get(
-          "https://api.idijakpus.or.id/web/kegiatan"
-        );
+        const { data } = await apis.home.kegiatan();
         this.kegiatan.data = data.data;
       } finally {
         this.kegiatan.isLoading = false;

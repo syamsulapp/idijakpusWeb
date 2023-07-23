@@ -63,8 +63,7 @@
 
 <script>
 import blogs from "../../data/Digital/blog.json";
-import axios from "axios";
-
+import apis from "../../src/api";
 export default {
   data() {
     return {
@@ -135,9 +134,7 @@ export default {
     async getDataKrip() {
       try {
         this.krip.isLoading = true;
-        const { data } = await axios.get(
-          "https://api.idijakpus.or.id/web/jadwal_krip"
-        );
+        const { data } = await apis.home.jadwalKrip();
         this.krip.data = data.data;
       } finally {
         this.krip.isLoading = false;

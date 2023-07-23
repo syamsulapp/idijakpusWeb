@@ -2,6 +2,11 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: "static",
 
+  //mau jalanin .env harus dibuatkan config terlebih dahulu agar environtmentnya jalan
+  env: {
+    url: process.env.NUXT_ENV_URLIDI,
+  },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: "Idi Cabang Jakarta Pusat",
@@ -46,6 +51,9 @@ export default {
       { src: "/assets/js/lib/html5shiv.min.js" },
       { src: "/assets/js/main.js", ssr: false },
     ],
+    paths: {
+      "@/*": ["src/*"],
+    },
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -69,10 +77,6 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: ["@nuxtjs/axios", ["vue-scrollto/nuxt", { duration: 1000 }]],
-
-  axios: {
-    baseURL: process.env.API_URL,
-  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

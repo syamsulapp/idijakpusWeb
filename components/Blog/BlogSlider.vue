@@ -64,7 +64,7 @@
 
 <script>
 import slidesRTL from "../../data/Blog/slides-rtl.json";
-import axios from "axios";
+import apis from "../../src/api";
 export default {
   props: ["rtl", "styleType"],
   data() {
@@ -121,9 +121,7 @@ export default {
     async getBerita() {
       try {
         this.berita.isLoading = true;
-        const { data } = await axios.get(
-          "https://api.idijakpus.or.id/web/berita"
-        );
+        const { data } = await apis.home.berita();
         this.berita.data = data.data;
       } finally {
         this.berita.isLoading = false;

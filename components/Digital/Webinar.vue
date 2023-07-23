@@ -65,8 +65,7 @@
 
 <script>
 import webinars from "../../data/Digital/blog.json";
-import axios from "axios";
-
+import apis from "../../src/api";
 export default {
   data() {
     return {
@@ -145,9 +144,7 @@ export default {
     async getDataWebinar() {
       try {
         this.webinar.isLoading = true;
-        const { data } = await axios.get(
-          "https://api.idijakpus.or.id/web/webinar"
-        );
+        const { data } = await apis.home.webinar();
         this.webinar.data = data.data;
       } finally {
         this.webinar.isLoading = false;

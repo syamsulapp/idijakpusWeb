@@ -34,8 +34,7 @@
         <div class="swiper-pagination"></div>
       </div>
 
-      <!-- <no-ssr>
-        detail galery
+      <no-ssr>
         <LightGallery
           :dir="rtl ? 'rtl' : 'ltr'"
           :images="gallery"
@@ -43,7 +42,7 @@
           :disable-scroll="true"
           @close="index = null"
         />
-      </no-ssr> -->
+      </no-ssr>
     </div>
   </section>
 </template>
@@ -97,9 +96,9 @@ export default {
     };
   },
   computed: {
-    // gallery() {
-    //   return this.galeriGet.data.map((slide) => ({ url: slide }));
-    // },
+    gallery() {
+      return this.galeriGet.data; // map data galery
+    },
 
     fetchGalery() {
       return this.galeriGet.data;

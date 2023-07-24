@@ -20,20 +20,22 @@
           :dir="rtl ? 'rtl' : 'ltr'"
           :options="swiperOptions"
         >
-          <swiper-slide v-for="(slide, index) in slides" :key="index">
+          <swiper-slide v-for="(slide, index) in fetchGalery" :key="index">
             <a
               @click="showGallery($event, index)"
               href="#"
               class="culture-card d-block"
             >
-              <img :src="slide" alt="" />
+              <img :src="slide.gallery_file" alt="" />
               <span @click="showGallery($event, index)" class="overlay"></span>
             </a>
           </swiper-slide>
         </swiper>
         <div class="swiper-pagination"></div>
       </div>
-      <no-ssr>
+
+      <!-- <no-ssr>
+        detail galery
         <LightGallery
           :dir="rtl ? 'rtl' : 'ltr'"
           :images="gallery"
@@ -41,19 +43,18 @@
           :disable-scroll="true"
           @close="index = null"
         />
-      </no-ssr>
+      </no-ssr> -->
     </div>
   </section>
 </template>
 
 <script>
-import slides from "../../data/Saas/culture.json";
+import apis from "../../src/api";
 
 export default {
   props: ["rtl"],
   data() {
     return {
-      slides,
       index: null,
       swiperOptions: {
         slidesPerView: 4,
@@ -89,11 +90,19 @@ export default {
           },
         },
       },
+      galeriGet: {
+        isLoading: false,
+        data: null,
+      },
     };
   },
   computed: {
-    gallery() {
-      return this.slides.map((slide) => ({ url: slide }));
+    // gallery() {
+    //   return this.galeriGet.data.map((slide) => ({ url: slide }));
+    // },
+
+    fetchGalery() {
+      return this.galeriGet.data;
     },
   },
   methods: {
@@ -101,6 +110,19 @@ export default {
       e.preventDefault();
       this.index = i;
     },
+    async getGaleri() {
+      try {
+        this.galeriGet.isLoading = true;
+        const { data } = await apis.galeri.imageGet();
+        this.galeriGet.data = data.data;
+      } finally {
+        this.galeriGet.isLoading = false;
+      }
+    },
+  },
+
+  mounted() {
+    this.getGaleri();
   },
 };
 </script>

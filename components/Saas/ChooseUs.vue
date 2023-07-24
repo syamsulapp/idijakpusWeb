@@ -27,7 +27,7 @@
                   : "With Iteck Marketplace, choose from hundreds of payment gateways for your customers."
               }}
             </div> -->
-            <br>
+            <br />
             <ul>
               <li
                 :class="`d-flex ${

@@ -77,9 +77,9 @@ export default {
   computed: {
     imgHandler() {
       return (item) => {
-        if (item.article_img) {
-          if (item.article_img.includes("https")) {
-            return item.article_img;
+        if (item) {
+          if (item.includes("https")) {
+            return item;
           } else {
             return require("../../../static/assets/img/no-image.png");
           }

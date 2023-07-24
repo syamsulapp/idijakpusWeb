@@ -12,7 +12,11 @@
       <div class="row">
         <div class="col-lg-5">
           <div class="img img-cover">
-            <img :src="img(blog.article_img)" class="radius-7" alt="..." />
+            <img
+              :src="imgHandler(blog.article_img)"
+              class="radius-7"
+              alt="..."
+            />
           </div>
         </div>
         <div class="col-lg-7">
@@ -84,17 +88,18 @@
 export default {
   props: ["rtl", "styleType", "isWide", "blogs"],
 
-  methods: {
-    img(data) {
-      if (data) {
-        if (data !== "pic") {
-          return data;
-        } else {
-          return require("../../../static/assets/img/no-image.png");
+  computed: {
+    imgHandler() {
+      return (item) => {
+        if (item) {
+          if (item.includes("https")) {
+            return item;
+          } else {
+            return require("../../../static/assets/img/no-image.png");
+          }
         }
-      } else {
         return require("../../../static/assets/img/no-image.png");
-      }
+      };
     },
   },
 };

@@ -5,10 +5,12 @@
     <main class="about-page style-5">
       <AboutHeader />
       <Community />
-      <Philosophy />
+      <br />
+      <br />
+      <br />
+      <br />
       <ChooseUs />
       <Culture />
-      <Team />
     </main>
     <Footer />
   </div>
@@ -20,10 +22,8 @@ import TopNav from "../../components/Navbars/DigitalNav/TopNav";
 import Navbar from "../../components/Navbars/DigitalNav";
 import AboutHeader from "../../components/Saas/AboutHeader";
 import Community from "../../components/Saas/Community";
-import Philosophy from "../../components/Saas/Philosophy";
 import ChooseUs from "../../components/Saas/ChooseUs";
 import Culture from "../../components/Saas/Culture";
-import Team from "../../components/Saas/Team";
 import Footer from "../../components/Digital/Footer";
 
 export default {
@@ -34,10 +34,8 @@ export default {
     Navbar,
     AboutHeader,
     Community,
-    Philosophy,
     ChooseUs,
     Culture,
-    Team,
     Footer,
   },
   head() {

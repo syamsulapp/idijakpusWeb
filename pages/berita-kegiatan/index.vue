@@ -16,8 +16,8 @@ import navbarScrollEffect from "../../common/navbarScrollEffect";
 import TopNav from "../../components/Navbars/DigitalNav/TopNav";
 import Navbar from "../../components/Navbars/DigitalNav";
 import BlogSlider from "../../components/Blog/BlogSlider";
-import PopularPosts from "../../components/Blog/PopularPosts";
-import AllNews from "../../components/Blog/AllNews";
+import PopularPosts from "../../src/components/berita-kegiatan/popularPost.vue";
+import AllNews from "../../src/components/berita-kegiatan/allNews.vue";
 import Footer from "../../components/Digital/Footer";
 
 export default {

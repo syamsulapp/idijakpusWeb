@@ -54,7 +54,7 @@
 </template>
 
 <script>
-import axios from "axios";
+import apis from "../../../api";
 
 export default {
   props: ["rtl", "styleType"],
@@ -81,9 +81,7 @@ export default {
     async getLayananAnggota() {
       try {
         this.anggota.isLoading = true;
-        const { data } = await axios.get(
-          "https://api.idijakpus.or.id/web/layanan/masuk_ppds"
-        );
+        const { data } = await apis.layananIdi.ppds();
         this.anggota.data = data.data;
       } finally {
         this.anggota.isLoading = false;

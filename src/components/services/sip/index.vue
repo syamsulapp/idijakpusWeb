@@ -6,7 +6,7 @@
           <div :class="`section-head style-${styleType}`">
             <h2>
               {{ rtl ? "" : "Permohonan" }} <br />
-              <span>{{ rtl ? "التحدى" : "Anggota" }}</span>
+              <span>{{ rtl ? "التحدى" : "Surta Izin Praktik Dokter" }}</span>
             </h2>
           </div>
         </div>
@@ -54,8 +54,7 @@
 </template>
 
 <script>
-import axios from "axios";
-
+import apis from "../../../api";
 export default {
   props: ["rtl", "styleType"],
   data() {
@@ -81,9 +80,7 @@ export default {
     async getLayananAnggota() {
       try {
         this.anggota.isLoading = true;
-        const { data } = await axios.get(
-          "https://api.idijakpus.or.id/web/layanan/anggota_baru"
-        );
+        const { data } = await apis.layananIdi.sip();
         this.anggota.data = data.data;
       } finally {
         this.anggota.isLoading = false;

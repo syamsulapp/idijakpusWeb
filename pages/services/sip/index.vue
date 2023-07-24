@@ -14,7 +14,7 @@
 import navbarScrollEffect from "../../../common/navbarScrollEffect";
 import TopNav from "../../../components/Navbars/DigitalNav/TopNav";
 import Navbar from "../../../components/Navbars/DigitalNav";
-import Challenge from "../../../components/layananIdi/Sip.vue";
+import Challenge from "../../../src/components/services/sip";
 import Screenshots from "../../../components/App/Screenshots";
 import Footer from "../../../components/Digital/Footer";
 

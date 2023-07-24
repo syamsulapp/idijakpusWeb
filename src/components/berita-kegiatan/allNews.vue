@@ -29,7 +29,7 @@
 
 <script>
 import Blogs from "./blog.vue";
-import BlogSidebar from "./blogSidebar.vue";
+import BlogSidebar from "../../components/sidebar";
 import apis from "../../api";
 
 export default {

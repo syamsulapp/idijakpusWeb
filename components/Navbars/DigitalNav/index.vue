@@ -126,17 +126,17 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
               <li>
-                <NuxtLink to="/home" class="dropdown-item"
+                <NuxtLink to="/about/profile" class="dropdown-item"
                   >Profile Idi Cabang Jakarta Pusat</NuxtLink
                 >
               </li>
               <li>
-                <NuxtLink to="/home" class="dropdown-item"
+                <NuxtLink to="/about/sejarah" class="dropdown-item"
                   >Sejarah Organisasi Kedokteran Indonesia</NuxtLink
                 >
               </li>
               <li>
-                <NuxtLink to="/home" class="dropdown-item"
+                <NuxtLink to="/about/susunan-pengurus" class="dropdown-item"
                   >Susunan Pengurus
                 </NuxtLink>
               </li>

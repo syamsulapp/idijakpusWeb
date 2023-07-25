@@ -17,11 +17,11 @@
               v-for="(item, index) in data"
               :key="index.id"
             >
-              {{
+              <b>{{
                 rtl
                   ? 'قم بإنشاء موقع ويب غير تقليدي ولكنه سهل الاستخدام - مبتكر ، بتصميم نظيف وبسيط يتواصل ويعرض محتوى الوسائط المتعددة. الموقع الذي ينشر الرسالة: "إنها قصص حبك.”'
                   : item.article_title
-              }}
+              }}</b>
             </div>
             <ul class="color-000">
               <li
@@ -29,23 +29,9 @@
                 v-for="(item, index) in data"
                 :key="index.id"
               >
-                <i class="bi bi-dot fs-6 me-2"></i> {{ item.article_body }}
+                <div v-html="item.article_body"></div>
               </li>
             </ul>
-          </div>
-        </div>
-      </div>
-      <div class="imgs mt-60 mb-100">
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="img img-cover rounded-3 overflow-hidden mb-30 mb-lg-0">
-              <img src="/assets/img/icon-idcard.png" alt="" />
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="img img-cover rounded-3 overflow-hidden">
-              <img src="/assets/img/idi-logo.svg" alt="" />
-            </div>
           </div>
         </div>
       </div>

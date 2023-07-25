@@ -7,9 +7,9 @@
             <div class="top-links">
               <div class="text text-white">
                 <i class="fas fa-bullhorn"></i>
-                <strong>Now Hiring:</strong>
+                <strong>Berita Terbaru:</strong>
                 <span
-                  >Fitur Webinar Sudah Terbit Silahkan Cek
+                  >Download Aplikasi Simfoni Ver Terbaru
                   <a
                     href="https://m.idijakpus.or.id"
                     class="p-0"

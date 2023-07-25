@@ -83,27 +83,31 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
               <li>
-                <NuxtLink to="/home" class="dropdown-item"
+                <NuxtLink to="/berkas/surat-keputusan" class="dropdown-item"
                   >Surat Keputusan</NuxtLink
                 >
               </li>
               <li>
-                <NuxtLink to="/home" class="dropdown-item"
+                <NuxtLink to="/berkas/surat-edaran" class="dropdown-item"
                   >Surat Edaran</NuxtLink
                 >
               </li>
               <li>
-                <NuxtLink to="/home" class="dropdown-item"
+                <NuxtLink to="/berkas/buku-panduan" class="dropdown-item"
                   >Buku Dan Panduan
                 </NuxtLink>
               </li>
               <li>
-                <NuxtLink to="/home" class="dropdown-item"
+                <NuxtLink
+                  to="/berkas/peraturan-bidang-kesehatan"
+                  class="dropdown-item"
                   >Peraturan Bidang Kesehatan
                 </NuxtLink>
               </li>
               <li>
-                <NuxtLink to="/home" class="dropdown-item"
+                <NuxtLink
+                  to="/berkas/panduan-penggunaan-aplikasi"
+                  class="dropdown-item"
                   >Panduan Penggunaan Aplikasi Simfoni
                 </NuxtLink>
               </li>

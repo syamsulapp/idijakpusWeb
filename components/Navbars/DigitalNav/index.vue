@@ -163,7 +163,7 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
               <li>
-                <NuxtLink to="/" class="dropdown-item">FAQ</NuxtLink>
+                <NuxtLink to="/faq" class="dropdown-item">FAQ</NuxtLink>
               </li>
               <li>
                 <NuxtLink to="/contact" class="dropdown-item"

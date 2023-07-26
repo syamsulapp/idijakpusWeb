@@ -6,13 +6,11 @@
         <div :class="isWide ? 'col-lg-12' : 'col-lg-8'">
           <!-- <Metadata :metadata="metadata" :rtl="rtl" /> -->
           <div class="blog-content-info">
-            <!-- <Content
+            <Content
+              :detailContent="detailPostingan"
               :styleType="styleType"
               :rtl="rtl"
-              :detailContent="detailPostingan"
-            /> -->
-            <div v-html="detailPostingan.article_body"></div>
-
+            />
             <!-- <Comments
               :comments="data.comments"
               :commentCard="data.commentCard"

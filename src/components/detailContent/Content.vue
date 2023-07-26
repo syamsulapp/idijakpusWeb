@@ -6,6 +6,6 @@
 
 <script>
 export default {
-  props: ["rtl", "styleType"],
+  props: ["rtl", "styleType", "detailContent"],
 };
 </script>

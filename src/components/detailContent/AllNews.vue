@@ -8,15 +8,15 @@
       />
       <div class="row gx-4 gx-lg-5">
         <div :class="isWide ? 'col-lg-12' : 'col-lg-8'">
-          <Metadata :metadata="metadata" :rtl="rtl" />
+          <!-- <Metadata :metadata="metadata" :rtl="rtl" /> -->
           <div class="blog-content-info">
             <Content :styleType="styleType" :rtl="rtl" />
-            <Comments
+            <!-- <Comments
               :comments="data.comments"
               :commentCard="data.commentCard"
               :styleType="styleType"
               :rtl="rtl"
-            />
+            /> -->
           </div>
         </div>
         <Sidebar
@@ -33,9 +33,9 @@
 
 <script>
 import Details from "../detailContent/Details.vue";
-import Metadata from "../detailContent/Metadata.vue";
+// import Metadata from "../detailContent/Metadata.vue";
 import Content from "../detailContent/Content.vue";
-import Comments from "../detailContent/Comments.vue";
+// import Comments from "../detailContent/Comments.vue";
 import Sidebar from "../sidebar";
 
 import news from "../../../data/SinglePost/all-news.json";
@@ -71,9 +71,9 @@ export default {
   },
   components: {
     Details,
-    Metadata,
+    // Metadata,
     Content,
-    Comments,
+    // Comments,
     Sidebar,
   },
 

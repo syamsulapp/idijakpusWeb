@@ -146,7 +146,7 @@
           }}
         </div>
   
-        <div class="blog-share mt-80">
+        <!-- <div class="blog-share mt-80">
           <div class="row align-items-center">
             <div class="col-lg-6">
               <div class="side-tags">
@@ -180,7 +180,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </template>

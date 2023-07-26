@@ -8,8 +8,8 @@
 
 <script>
 import fixStylesheetsOrder from "../common/fixStylesheetsOrder";
-import PreLoader from "../components/PreLoader/index.vue";
-import ScrollToTop from "../components/ScrollToTop/index.vue";
+import PreLoader from "../src/layouts/PreLoader.vue";
+import ScrollToTop from "../src/layouts/ScrollToTop.vue";
 
 export default {
   components: {

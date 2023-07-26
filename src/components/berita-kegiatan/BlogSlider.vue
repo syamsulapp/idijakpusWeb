@@ -24,7 +24,7 @@
                       </small>
                       <h2 class="title">
                         <NuxtLink
-                          :to="rtl ? '/rtl-page-single-post' : `/home/berita`"
+                          :to="`/home/details${berita.article_permalink}`"
                         >
                           {{ berita.article_title }}
                         </NuxtLink>

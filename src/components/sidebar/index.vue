@@ -3,7 +3,7 @@
     <div class="side-blog style-5 ps-lg-5 mt-5 mt-lg-0">
       <form action="contact.php" class="search-form mb-50" method="post">
         <h6 class="title mb-20 text-uppercase fw-normal">
-          {{ rtl ? "بحث" : "search" }}
+          {{ "Pencarian" }}
         </h6>
         <div class="form-group position-relative">
           <input
@@ -19,7 +19,7 @@
 
       <div class="side-recent-post mb-50">
         <h6 class="title mb-20 text-uppercase fw-normal">
-          {{ rtl ? "المنشورات الاخيرة" : "recent post" }}
+          {{ "Postingan Terkini" }}
         </h6>
         <NuxtLink
           :to="rtl ? '/rtl-page-single-post' : '/home/berita'"
@@ -37,11 +37,7 @@
           <div class="inf">
             <h6>{{ post.article_title }}</h6>
             <p>
-              {{
-                rtl
-                  ? "إذا كانت هناك طريقة واحدة تعمل بها التكنولوجيا اللاسلكية"
-                  : post.article_permalink
-              }}
+              {{ post.article_permalink }}
               [...]
             </p>
           </div>
@@ -50,7 +46,7 @@
 
       <div class="side-categories mb-50">
         <h6 class="title mb-20 text-uppercase fw-normal">
-          {{ rtl ? "التصنيفات" : "categories" }}
+          {{ "Kategori" }}
         </h6>
         <a
           href="#"

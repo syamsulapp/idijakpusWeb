@@ -7,13 +7,6 @@
         :rtl="rtl"
       />
       <div class="row gx-4 gx-lg-5">
-        <Sidebar
-          v-if="!isWide && leftSidebar"
-          :data="data.sidebar"
-          :leftSidebar="leftSidebar"
-          :styleType="styleType"
-          :rtl="rtl"
-        />
         <div :class="isWide ? 'col-lg-12' : 'col-lg-8'">
           <Metadata :metadata="metadata" :rtl="rtl" />
           <div class="blog-content-info">
@@ -28,7 +21,7 @@
         </div>
         <Sidebar
           v-if="!isWide && !leftSidebar"
-          :data="data.sidebar"
+          :sidebarData="postinganTerkini"
           :leftSidebar="leftSidebar"
           :styleType="styleType"
           :rtl="rtl"
@@ -43,16 +36,23 @@ import Details from "../detailContent/Details.vue";
 import Metadata from "../detailContent/Metadata.vue";
 import Content from "../detailContent/Content.vue";
 import Comments from "../detailContent/Comments.vue";
-import Sidebar from "../detailContent/Sidebar.vue";
+import Sidebar from "../sidebar";
 
 import news from "../../../data/SinglePost/all-news.json";
 import newsRTL from "../../../data/SinglePost/all-news-rtl.json";
+
+import apis from "../../api";
 
 export default {
   props: ["rtl", "styleType", "isWide", "leftSidebar"],
   data() {
     return {
       data: this.rtl ? newsRTL : news,
+      recentPost: {
+        isLoading: false,
+        data: null,
+        limit: 4,
+      },
     };
   },
   computed: {
@@ -64,6 +64,10 @@ export default {
         viewsCount: this.data.viewsCount,
       };
     },
+
+    postinganTerkini() {
+      return this.recentPost.data;
+    },
   },
   components: {
     Details,
@@ -71,6 +75,24 @@ export default {
     Content,
     Comments,
     Sidebar,
+  },
+
+  mounted() {
+    this.getPostinganTerkini();
+  },
+
+  methods: {
+    async getPostinganTerkini() {
+      try {
+        this.recentPost.isLoading = true;
+        const { data } = await apis.beritaKegiatan.recentPost({
+          limit: this.recentPost.limit,
+        });
+        this.recentPost.data = data.data;
+      } finally {
+        this.recentPost.isLoading = false;
+      }
+    },
   },
 };
 </script>

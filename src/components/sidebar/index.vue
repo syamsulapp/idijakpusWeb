@@ -22,7 +22,7 @@
           {{ "Postingan Terkini" }}
         </h6>
         <NuxtLink
-          :to="'/home/berita'"
+          :to="'/home/details'"
           v-for="(post, index) in sidebarData"
           :key="index"
           :class="`post-card ${

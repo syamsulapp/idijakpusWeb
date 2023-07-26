@@ -31,7 +31,7 @@
               <a href="#" class="op-8">{{ blog.article_publish_datetime }}</a>
             </small>
             <NuxtLink
-              :to="rtl ? '/rtl-page-single-post' : '/home/berita'"
+              :to="`/home/details/${blog.article_permalink}`"
               class="card-title mb-10"
             >
               {{ blog.article_title }}

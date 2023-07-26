@@ -36,7 +36,7 @@
                   >
                 </small>
                 <h5 class="fw-bold mt-10 title">
-                  <NuxtLink to="/home/berita">{{
+                  <NuxtLink :to="`/home/details/${post.article_permalink}`">{{
                     post.article_title
                   }}</NuxtLink>
                 </h5>

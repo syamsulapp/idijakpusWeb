@@ -22,7 +22,7 @@
           {{ "Postingan Terkini" }}
         </h6>
         <NuxtLink
-          :to="'/home/details'"
+          :to="`/home/details/${post.article_permalink}`"
           v-for="(post, index) in sidebarData"
           :key="index"
           :class="`post-card ${

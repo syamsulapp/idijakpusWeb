@@ -1,16 +1,18 @@
 <template>
   <section class="all-news section-padding pt-50 blog bg-transparent style-3">
     <div class="container">
-      <Details
-        :details="{ title: data.title, time: data.time, type: data.type }"
-        :styleType="styleType"
-        :rtl="rtl"
-      />
+      <Details :details="detailPostingan" :styleType="styleType" :rtl="rtl" />
       <div class="row gx-4 gx-lg-5">
         <div :class="isWide ? 'col-lg-12' : 'col-lg-8'">
           <!-- <Metadata :metadata="metadata" :rtl="rtl" /> -->
           <div class="blog-content-info">
-            <Content :styleType="styleType" :rtl="rtl" />
+            <!-- <Content
+              :styleType="styleType"
+              :rtl="rtl"
+              :detailContent="detailPostingan"
+            /> -->
+            <div v-html="detailPostingan.article_body"></div>
+
             <!-- <Comments
               :comments="data.comments"
               :commentCard="data.commentCard"
@@ -53,6 +55,10 @@ export default {
         data: null,
         limit: 4,
       },
+      detailDatas: {
+        isLoading: false,
+        data: {},
+      },
     };
   },
   computed: {
@@ -68,6 +74,10 @@ export default {
     postinganTerkini() {
       return this.recentPost.data;
     },
+
+    detailPostingan() {
+      return this.detailDatas.data;
+    },
   },
   components: {
     Details,
@@ -79,6 +89,7 @@ export default {
 
   mounted() {
     this.getPostinganTerkini();
+    this.getDetailDataContent();
   },
 
   methods: {
@@ -91,6 +102,15 @@ export default {
         this.recentPost.data = data.data;
       } finally {
         this.recentPost.isLoading = false;
+      }
+    },
+    async getDetailDataContent() {
+      try {
+        this.detailDatas.isLoading = true;
+        const { data } = await apis.home.detail(this.$route.params.id);
+        this.detailDatas.data = data.data;
+      } finally {
+        this.detailDatas.isLoading = false;
       }
     },
   },

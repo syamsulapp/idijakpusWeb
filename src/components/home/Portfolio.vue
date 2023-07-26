@@ -24,7 +24,9 @@
                 </div>
                 <div class="info">
                   <h5>
-                    <NuxtLink to="/home/details">
+                    <NuxtLink
+                      :to="`/home/details/${kegiatan.article_permalink}`"
+                    >
                       {{ kegiatan.article_title }}
                     </NuxtLink>
                   </h5>

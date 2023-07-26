@@ -18,13 +18,13 @@
 
 <script>
 import navbarScrollEffect from "../../common/navbarScrollEffect";
-import TopNav from "../../components/Navbars/DigitalNav/TopNav";
-import Navbar from "../../components/Navbars/DigitalNav";
-import AboutHeader from "../../components/Saas/AboutHeader";
-import Community from "../../components/Saas/Community";
-import ChooseUs from "../../components/Saas/ChooseUs";
-import Culture from "../../components/Saas/Culture";
-import Footer from "../../components/Digital/Footer";
+import TopNav from "../../src/layouts/TopNav";
+import Navbar from "../../src/layouts/Navbar";
+import AboutHeader from "../../src/components/galeri/AboutHeader.vue";
+import Community from "../../src/components/galeri/Community.vue";
+import ChooseUs from "../../src/components/galeri/ChooseUs.vue";
+import Culture from "../../src/components/galeri/Culture.vue";
+import Footer from "../../src/layouts/Footer";
 
 export default {
   name: "PageAbout5",

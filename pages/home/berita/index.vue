@@ -12,11 +12,11 @@
 
 <script>
 import navbarScrollEffect from "../../../common/navbarScrollEffect";
-import TopNav from "../../../components/Navbars/DigitalNav/TopNav";
-import Navbar from "../../../components/Navbars/DigitalNav";
-import AllNews from "../../../components/SinglePost/AllNews";
-import PopularPosts from "../../../components/SinglePost/PopularPosts";
-import Footer from "../../../components/Digital/Footer";
+import TopNav from "../../../src/layouts/TopNav";
+import Navbar from "../../../src/layouts/Navbar";
+import AllNews from "../../../src/components/detailContent/AllNews.vue";
+import PopularPosts from "../../../src/components/detailContent/PopularPosts.vue";
+import Footer from "../../../src/layouts/Footer";
 
 export default {
   name: "PageSinglePost5",
@@ -30,7 +30,7 @@ export default {
   },
   head() {
     return {
-      titleTemplate: "%s - Berita",
+      titleTemplate: "%s - Kegiatan",
     };
   },
   mounted() {

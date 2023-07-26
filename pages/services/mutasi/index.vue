@@ -12,11 +12,11 @@
 
 <script>
 import navbarScrollEffect from "../../../common/navbarScrollEffect";
-import TopNav from "../../../components/Navbars/DigitalNav/TopNav";
-import Navbar from "../../../components/Navbars/DigitalNav";
+import TopNav from "../../../src/layouts/TopNav";
+import Navbar from "../../../src/layouts/Navbar";
 import Challenge from "../../../src/components/services/mutasi";
-import Screenshots from "../../../components/App/Screenshots";
-import Footer from "../../../components/Digital/Footer";
+import Screenshots from "../../../src/source/screenshot";
+import Footer from "../../../src/layouts/Footer";
 
 export default {
   name: "PageSingleProject5",

@@ -12,11 +12,12 @@
 
 <script>
 import navbarScrollEffect from "../../common/navbarScrollEffect";
-import TopNav from "../../components/Navbars/DigitalNav/TopNav";
-import Navbar from "../../components/Navbars/DigitalNav";
-import Form from "../../components/Contact/Form";
-import Map from "../../components/Contact/Map";
-import Footer from "../../components/Digital/Footer";
+import TopNav from "../../src/layouts/TopNav";
+import Navbar from "../../src/layouts/Navbar";
+
+import Form from "../../src/components/contact/Form.vue";
+import Map from "../../src/components/contact/Map.vue";
+import Footer from "../../src/layouts/Footer";
 
 export default {
   name: "PageContact5",

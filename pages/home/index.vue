@@ -17,15 +17,23 @@
 </template>
 
 <script>
-import TopNav from "../../components/Navbars/DigitalNav/TopNav";
-import Navbar from "../../components/Navbars/DigitalNav";
-import Header from "../../components/Digital/Header";
-import BlogSlider from "../../components/Blog/BlogSlider";
-import Services from "../../components/Digital/Services";
-import Portfolio from "../../components/Digital/Portfolio";
-import Blog from "../../components/Digital/Blog";
-import Webinar from "../../components/Digital/Webinar";
-import Footer from "../../components/Digital/Footer";
+//header
+import TopNav from "../../src/layouts/TopNav";
+import Navbar from "../../src/layouts/Navbar";
+import Header from "../../src/layouts/Header";
+//end headr
+
+//content
+import BlogSlider from "../../src/components/home/BlogSlider.vue";
+import Services from "../../src/components/home/Services.vue";
+import Portfolio from "../../src/components/home/Portfolio.vue";
+import Blog from "../../src/components/home/Blog.vue";
+import Webinar from "../../src/components/home/Webinar.vue";
+//end-content
+
+//footer
+import Footer from "../../src/layouts/Footer";
+//end footr
 
 export default {
   name: "idijakartapusat",

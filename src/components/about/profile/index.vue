@@ -31,7 +31,7 @@
               >
                 <div v-html="item.article_body"></div>
               </li>
-              <h1>{{ "data tidak ditemukan" }}</h1>
+              <p>{{ "saat ini data tidak tersedia" }}</p>
             </ul>
           </div>
         </div>

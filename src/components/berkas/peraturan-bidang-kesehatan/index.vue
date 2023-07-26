@@ -32,7 +32,7 @@
                 <div v-html="item.article_body"></div>
               </li>
             </ul>
-            <h2>{{ "data tidak ditemukan" }}</h2>
+            <p>{{ "saat ini data tidak tersedia" }}</p>
           </div>
         </div>
       </div>

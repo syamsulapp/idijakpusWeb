@@ -54,7 +54,8 @@
       </div>
     </div>
 
-    <div
+    <!-- hide pagination -->
+    <!-- <div
       :class="`pagination style-5 color-${styleType} justify-content-center mt-60`"
     >
       <a href="#" class="active">
@@ -83,7 +84,7 @@
           >{{ rtl ? "التالي" : "next" }} <i class="fas fa-chevron-right"></i>
         </span>
       </a>
-    </div>
+    </div> -->
   </div>
 </template>
 

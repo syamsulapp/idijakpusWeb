@@ -1,7 +1,8 @@
 <template>
   <div class="col-lg-4">
     <div class="side-blog style-5 ps-lg-5 mt-5 mt-lg-0">
-      <form action="contact.php" class="search-form mb-50" method="post">
+      <!-- hide search -->
+      <!-- <form action="contact.php" class="search-form mb-50" method="post">
         <h6 class="title mb-20 text-uppercase fw-normal">
           {{ "Pencarian" }}
         </h6>
@@ -15,7 +16,7 @@
             <i class="fas fa-search"></i>
           </button>
         </div>
-      </form>
+      </form> -->
 
       <div class="side-recent-post mb-50">
         <h6 class="title mb-20 text-uppercase fw-normal">
@@ -44,7 +45,8 @@
         </NuxtLink>
       </div>
 
-      <div class="side-categories mb-50">
+      <!-- hide kategori dan tags-->
+      <!-- <div class="side-categories mb-50">
         <h6 class="title mb-20 text-uppercase fw-normal">
           {{ "Kategori" }}
         </h6>
@@ -72,7 +74,7 @@
             >{{ tag.name }}</a
           >
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>

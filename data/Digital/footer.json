@@ -1,5 +1,5 @@
 {
-  "address": "Jalan Salemba Blok M No 10",
+  "address": "Jl. Salemba Tengah Blok D-E No.12, RT.1/RW.3, Paseban, Kec. Senen, Kota Jakarta Pusat,Daerah Khusus Ibukota Jakarta 10440, Indonesia",
   "phone": "(+62) 811-9110-189",
   "email": "info@idijakpus.or.id",
   "services": [
@@ -10,15 +10,33 @@
     "STR",
     "Forum/Studi Kasus"
   ],
-  "information": [
-    "About Iteck",
-    "Investors",
-    "Blog",
-    "Career",
-    "Contact",
-    "Affiliate Program",
-    "How It Works",
-    "Pricing Plan",
-    "Covid-19 Update"
-  ]
+  "pendidikan": [
+   {
+    "nama": "MKKI",
+    "url": "https://mkki.idionline.org/"
+   },
+   {
+    "nama": "Kolegium Dokter Indonesia",
+    "url": "https://www.idionline.org/pendidikan/kolegium-dokter-indonesia/"
+   },
+   {
+    "nama": "Akreditasi P2KB",
+    "url": "https://akreditasi.idionline.org/login"
+   }
+  ],
+  "sosialmedia": [
+   {
+    "icon": "fab fa-facebook-f",
+    "url": "https://www.facebook.com/IDIJAKPUS"
+   },
+   {
+    "icon": "fab fa-instagram",
+    "url": "https://www.instagram.com/idi.jakartapusat/"
+   },
+   {
+    "icon": "fab fa-youtube",
+    "url": "https://www.youtube.com/channel/UC5hn3b1ERFS2IeT6NwvKaNg"
+   }
+  ],
+  "footerCopyright" : "Copyright © 2023. Ikatan Dokter Indonesia Cabang Jakarta Pusat"
 }

@@ -176,12 +176,14 @@
         <div class="nav-side">
           <div class="hotline pe-4">
             <div class="icon me-3">
-              <i class="bi bi-telephone"></i>
+              <a href="https://m.idijakpus.or.id/" target="_blank">
+                <i class="fa fa-sign-in"></i
+              ></a>
             </div>
-            <div class="cont">
+            <!-- <div class="cont">
               <small class="text-muted m-0">Contact IDI Jakpus</small>
               <h6>(+62) 811-9110-189</h6>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>

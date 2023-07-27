@@ -52,7 +52,11 @@
                 <ul class="mb-4">
                   <li class="d-flex">
                     <i class="bi bi-phone me-3"></i>
-                    <span>{{ "+62 811-9110-189" }}</span>
+                    <span
+                      ><a href="tel:+62 811-9110-189">{{
+                        "+62 811-9110-189"
+                      }}</a></span
+                    >
                   </li>
                   <li class="d-flex">
                     <i class="bi bi-mailbox2 me-3"></i>

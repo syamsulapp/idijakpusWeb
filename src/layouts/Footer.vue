@@ -18,9 +18,9 @@
                 </li>
                 <li class="d-flex">
                   <i class="bi bi-map me-3"></i>
-                  <a href="/home/contact">
+                  <Nuxt-link to="/contact">
                     <span>{{ "Lokasi Kami" }}</span>
-                  </a>
+                  </Nuxt-link>
                 </li>
                 <!-- <li class="d-flex">
                   <i class="bi bi-phone me-3"></i>

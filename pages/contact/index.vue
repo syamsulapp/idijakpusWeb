@@ -3,8 +3,8 @@
     <TopNav styleType="5" />
     <Navbar ref="navbarRef" :isTransparent="true" />
     <main class="contact-page style-5">
-      <Form styleType="5" />
       <Map />
+      <Form styleType="5" />
     </main>
     <Footer :noWave="true" />
   </div>

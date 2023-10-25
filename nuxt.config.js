@@ -66,6 +66,11 @@ export default {
     { src: "~/plugins/vueRangeSlider.js", ssr: false },
   ],
 
+  routes: [
+    { src: "/_nuxt/.+", headers: { "cache-control": "s-maxage=31536000" } },
+    { src: "/(.*)", dest: "/" },
+  ],
+
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: false,
 

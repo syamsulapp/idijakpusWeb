@@ -182,7 +182,7 @@
             </div>
             <div class="cont">
               <small class="text-muted m-0">Go To Aplikasi</small>
-              <h6>(Simfoni Idi Jakarta Pusat)</h6>
+              <h6>(Simfoni Idi Cabang Jakarta Pusat)</h6>
             </div>
           </div>
         </div>

@@ -180,10 +180,10 @@
                 <i class="fa fa-sign-in"></i
               ></a>
             </div>
-            <!-- <div class="cont">
-              <small class="text-muted m-0">Contact IDI Jakpus</small>
-              <h6>(+62) 811-9110-189</h6>
-            </div> -->
+            <div class="cont">
+              <small class="text-muted m-0">Go To Aplikasi</small>
+              <h6>(Simfoni Idi Jakpus)</h6>
+            </div>
           </div>
         </div>
       </div>

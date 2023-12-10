@@ -54,7 +54,7 @@
                       type="text"
                       name="name"
                       class="form-control"
-                      :placeholder="rtl ? 'الاسم' : 'Name'"
+                      :placeholder="rtl ? 'الاسم' : 'Nama Lengkap'"
                       v-model="formData.name"
                     />
                   </div>
@@ -79,7 +79,9 @@
                       name="phone"
                       class="form-control"
                       :placeholder="
-                        rtl ? 'رقم الهاتف (اختياري)' : 'Phone Number (option)'
+                        rtl
+                          ? 'رقم الهاتف (اختياري)'
+                          : 'Nomor Handphone (option)'
                       "
                       v-model="formData.phone"
                     />
@@ -92,7 +94,7 @@
                       name="website"
                       class="form-control"
                       :placeholder="
-                        rtl ? 'رابط موقعك (اختيارى)' : 'Your Website (option)'
+                        rtl ? 'رابط موقعك (اختيارى)' : 'Alamat rumah (option)'
                       "
                       v-model="formData.website"
                     />
@@ -113,11 +115,22 @@
                           rtl ? "كيف يمكننا مساعدتك ؟" : "How can we help you?"
                         }}
                       </option>
-                      <option value="option 1">
-                        {{ rtl ? "الاختيار الاول" : "option 1" }}
+                      <option value="layanan_rekomendasi_izin_praktik">
+                        {{
+                          rtl ? "الاختيار الاول" : "Rekomendasi Izin Praktik"
+                        }}
                       </option>
-                      <option value="option 2">
-                        {{ rtl ? "الاختيار الثاني" : "option 2" }}
+                      <option value="layanan_str">
+                        {{ rtl ? "الاختيار الثاني" : "Layanan STR" }}
+                      </option>
+                      <option value="layanan_krip">
+                        {{ rtl ? "الاختيار الثاني" : "Layanan KRIP" }}
+                      </option>
+                      <option value="layanan_kta">
+                        {{ rtl ? "الاختيار الثاني" : "Layanan KTA" }}
+                      </option>
+                      <option value="layanan_iuran">
+                        {{ rtl ? "الاختيار الثاني" : "Layanan IURAN" }}
                       </option>
                     </select>
                   </div>
@@ -150,10 +163,10 @@
                       {{
                         rtl
                           ? "من خلال الإرسال ، أوافق على"
-                          : "By submitting, i’m agreed to the"
+                          : "Silahkan checklist data ini jika form yang anda isi sudah benar"
                       }}
                       <a href="#" class="text-decoration-underline">{{
-                        rtl ? "الشروط و الاحكام" : "Terms & Conditons"
+                        rtl ? "الشروط و الاحكام" : "Back to top"
                       }}</a>
                     </label>
                   </div>
@@ -161,7 +174,7 @@
                 <div class="col-lg-12 text-center">
                   <input
                     type="submit"
-                    :value="rtl ? 'ارسل طلبك' : 'Submit'"
+                    :value="rtl ? 'ارسل طلبك' : 'Kirim'"
                     :class="`btn rounded-pill ${
                       styleType === '4'
                         ? 'bg-blue4 text-white fs-12px'

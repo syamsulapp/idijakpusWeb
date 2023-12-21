@@ -34,12 +34,7 @@
       <div class="content">
         <div class="row justify-content-center">
           <div class="col-lg-8">
-            <form
-              action="contact.php"
-              class="form"
-              method="post"
-              @submit="handleFormSubmit"
-            >
+            <form class="form" method="post" @submit="handlerSubmitContact">
               <p class="text-center text-danger fs-12px mb-30">
                 {{ this.handlerMessageErrorForms }}:
               </p>
@@ -58,7 +53,7 @@
                       name="email"
                       class="form-control"
                       :placeholder="'Masukan Email'"
-                      v-model="formData.contact_email"
+                      v-model="formContact.contact_email"
                     />
                   </div>
                 </div>
@@ -69,7 +64,7 @@
                       name="subject"
                       class="form-control"
                       :placeholder="'Masukan Subject Pesan *'"
-                      v-model="formData.contact_subject"
+                      v-model="formContact.contact_subject"
                     />
                   </div>
                 </div>
@@ -80,7 +75,7 @@
                       name="message"
                       class="form-control"
                       :placeholder="'tulis isi pesannya?'"
-                      v-model="formData.contact_content"
+                      v-model="formContact.contact_content"
                     ></textarea>
                   </div>
                 </div>
@@ -124,7 +119,7 @@ export default {
   },
   data() {
     return {
-      formData: {
+      formContact: {
         contact_email: "",
         contact_subject: "",
         contact_content: "",
@@ -138,43 +133,29 @@ export default {
   },
   methods: {
     handleFormOptionChange(e) {
-      this.formData.option = e.target.value;
+      this.formContact.option = e.target.value;
     },
-    async handleFormSubmit(e) {
+
+    async handlerSubmitContact(e) {
       e.preventDefault();
-      // const formValues = new FormData();
-
-      // formValues.append("name", this.formData.name);
-      // formValues.append("email", this.formData.email);
-      // formValues.append("option", this.formData.option);
-      // formValues.append("phone", this.formData.phone);
-      // formValues.append("website", this.formData.website);
-      // formValues.append("message", this.formData.message);
-
-      // const res = await fetch("/contact.php", {
-      //   method: "POST",
-      //   body: formValues,
-      // }).catch((err) => alert(err.message));
-
-      // if (!res.ok) return;
-      this.contact.isLoading = true;
-      apis.contact
-        .submit(this.formData)
-        .then(({ data }) => {
-          alert(data.message);
-          location.reload();
-        })
-        .catch((error) => {
-          console.log(error.response.data.message);
-          this.contact.data = error.response.data;
-          this.errors = error.response.data.errors;
-          this.errors.forEach((i) => {
-            alert(i.message);
-          });
-        })
-        .finally(() => {
-          this.contact.isLoading = false;
+      //consume api with async methods
+      try {
+        this.contact.isLoading = true;
+        const { data } = await apis.contact.submit(this.formContact);
+        this.contact.data = data;
+        alert("terimakasih telah menghubungi kami");
+      } catch (error) {
+        console.log(error.response.data);
+        this.contact.data = error.response.data;
+        this.errors = error.response.data.errors;
+        this.errors.forEach((i) => {
+          // loop all error validation present to alert pop up
+          alert(i["message"]); //can use i.message atau i['message']
         });
+      } finally {
+        // finally can run after do after our state success or error
+        this.contact.isLoading = false;
+      }
     },
   },
 };

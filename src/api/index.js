@@ -3,6 +3,7 @@ import beritaKegiatan from "./module/beritaKegiatan";
 import layananIdi from "./module/layananIdi";
 import galeri from "./module/galeri";
 import about from "./module/about";
+import contact from "./module/contact";
 
 export default {
   home,
@@ -10,4 +11,5 @@ export default {
   layananIdi,
   galeri,
   about,
+  contact,
 };

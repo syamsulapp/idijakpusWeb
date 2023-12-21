@@ -41,98 +41,36 @@
               @submit="handleFormSubmit"
             >
               <p class="text-center text-danger fs-12px mb-30">
-                {{
-                  rtl
-                    ? "الحقل اللذى يحتوى على هذة العلامة اجبارى *"
-                    : "The field is required mark as *"
-                }}
+                {{ this.handlerMessageErrorForms }}:
               </p>
+              <p
+                class="text-center text-danger fs-12px mb-15"
+                v-for="error in errors"
+              >
+                {{ error.message }}
+              </p>
+              <br />
               <div class="row">
                 <div class="col-lg-6">
                   <div class="form-group mb-20">
                     <input
-                      type="text"
-                      name="name"
-                      class="form-control"
-                      :placeholder="rtl ? 'الاسم' : 'Nama Lengkap'"
-                      v-model="formData.name"
-                    />
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="form-group mb-20">
-                    <input
-                      type="text"
+                      type="email"
                       name="email"
                       class="form-control"
-                      :placeholder="
-                        rtl ? 'البريد الالكترونى *' : 'Email Address *'
-                      "
-                      v-model="formData.email"
+                      :placeholder="'Masukan Email'"
+                      v-model="formData.contact_email"
                     />
                   </div>
                 </div>
                 <div class="col-lg-6">
                   <div class="form-group mb-20">
                     <input
-                      type="text"
-                      name="phone"
+                      type="subject"
+                      name="subject"
                       class="form-control"
-                      :placeholder="
-                        rtl
-                          ? 'رقم الهاتف (اختياري)'
-                          : 'Nomor Handphone (option)'
-                      "
-                      v-model="formData.phone"
+                      :placeholder="'Masukan Subject Pesan *'"
+                      v-model="formData.contact_subject"
                     />
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="form-group mb-20">
-                    <input
-                      type="text"
-                      name="website"
-                      class="form-control"
-                      :placeholder="
-                        rtl ? 'رابط موقعك (اختيارى)' : 'Alamat rumah (option)'
-                      "
-                      v-model="formData.website"
-                    />
-                  </div>
-                </div>
-                <div class="col-lg-12">
-                  <div class="form-group mb-20">
-                    <select
-                      class="form-select"
-                      :value="
-                        rtl ? 'كيف يمكننا مساعدتك ؟' : 'How can we help you?'
-                      "
-                      name="option"
-                      @change="handleFormOptionChange"
-                    >
-                      <option value="how can we help">
-                        {{
-                          rtl ? "كيف يمكننا مساعدتك ؟" : "How can we help you?"
-                        }}
-                      </option>
-                      <option value="layanan_rekomendasi_izin_praktik">
-                        {{
-                          rtl ? "الاختيار الاول" : "Rekomendasi Izin Praktik"
-                        }}
-                      </option>
-                      <option value="layanan_str">
-                        {{ rtl ? "الاختيار الثاني" : "Layanan STR" }}
-                      </option>
-                      <option value="layanan_krip">
-                        {{ rtl ? "الاختيار الثاني" : "Layanan KRIP" }}
-                      </option>
-                      <option value="layanan_kta">
-                        {{ rtl ? "الاختيار الثاني" : "Layanan KTA" }}
-                      </option>
-                      <option value="layanan_iuran">
-                        {{ rtl ? "الاختيار الثاني" : "Layanan IURAN" }}
-                      </option>
-                    </select>
                   </div>
                 </div>
                 <div class="col-lg-12">
@@ -141,35 +79,13 @@
                       rows="10"
                       name="message"
                       class="form-control"
-                      :placeholder="
-                        rtl ? 'كيف يمكننا مساعدتك ؟' : 'How can we help you?'
-                      "
-                      v-model="formData.message"
+                      :placeholder="'tulis isi pesannya?'"
+                      v-model="formData.contact_content"
                     ></textarea>
                   </div>
                 </div>
                 <div class="col-lg-12 text-center">
-                  <div class="form-check d-inline-flex mt-30 mb-30">
-                    <input
-                      class="form-check-input me-2 mt-0"
-                      type="checkbox"
-                      value=""
-                      id="flexCheckDefault"
-                    />
-                    <label
-                      class="form-check-label small"
-                      for="flexCheckDefault"
-                    >
-                      {{
-                        rtl
-                          ? "من خلال الإرسال ، أوافق على"
-                          : "Silahkan checklist data ini jika form yang anda isi sudah benar"
-                      }}
-                      <a href="#" class="text-decoration-underline">{{
-                        rtl ? "الشروط و الاحكام" : "Back to top"
-                      }}</a>
-                    </label>
-                  </div>
+                  <div class="form-check d-inline-flex mt-30 mb-30"></div>
                 </div>
                 <div class="col-lg-12 text-center">
                   <input
@@ -186,12 +102,6 @@
             </form>
           </div>
         </div>
-        <img src="/assets/img/icons/contact_a.png" alt="" class="contact_a" />
-        <img
-          src="/assets/img/icons/contact_message.png"
-          alt=""
-          class="contact_message"
-        />
       </div>
     </div>
   </section>
@@ -200,6 +110,7 @@
 <script>
 import contactInfo from "../../../data/Contact/form.json";
 import contactInfoRTL from "../../../data/Contact/form-rtl.json";
+import apis from "../../api";
 
 export default {
   props: ["rtl", "styleType"],
@@ -207,17 +118,22 @@ export default {
     contactInfoData() {
       return this.rtl ? contactInfoRTL : contactInfo;
     },
+    handlerMessageErrorForms() {
+      return this.contact.data.message;
+    },
   },
   data() {
     return {
       formData: {
-        name: "",
-        email: "",
-        phone: "",
-        website: "",
-        option: "",
-        message: "",
+        contact_email: "",
+        contact_subject: "",
+        contact_content: "",
       },
+      contact: {
+        isLoading: false,
+        data: {},
+      },
+      errors: [],
     };
   },
   methods: {
@@ -226,23 +142,39 @@ export default {
     },
     async handleFormSubmit(e) {
       e.preventDefault();
-      const formValues = new FormData();
+      // const formValues = new FormData();
 
-      formValues.append("name", this.formData.name);
-      formValues.append("email", this.formData.email);
-      formValues.append("option", this.formData.option);
-      formValues.append("phone", this.formData.phone);
-      formValues.append("website", this.formData.website);
-      formValues.append("message", this.formData.message);
+      // formValues.append("name", this.formData.name);
+      // formValues.append("email", this.formData.email);
+      // formValues.append("option", this.formData.option);
+      // formValues.append("phone", this.formData.phone);
+      // formValues.append("website", this.formData.website);
+      // formValues.append("message", this.formData.message);
 
-      const res = await fetch("/contact.php", {
-        method: "POST",
-        body: formValues,
-      }).catch((err) => alert(err.message));
+      // const res = await fetch("/contact.php", {
+      //   method: "POST",
+      //   body: formValues,
+      // }).catch((err) => alert(err.message));
 
-      if (!res.ok) return;
-
-      alert("Form submitted successfully.");
+      // if (!res.ok) return;
+      this.contact.isLoading = true;
+      apis.contact
+        .submit(this.formData)
+        .then(({ data }) => {
+          alert(data.message);
+          location.reload();
+        })
+        .catch((error) => {
+          console.log(error.response.data.message);
+          this.contact.data = error.response.data;
+          this.errors = error.response.data.errors;
+          this.errors.forEach((i) => {
+            alert(i.message);
+          });
+        })
+        .finally(() => {
+          this.contact.isLoading = false;
+        });
     },
   },
 };

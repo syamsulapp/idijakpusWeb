@@ -20,7 +20,7 @@ import Map from "../../src/components/contact/Map.vue";
 import Footer from "../../src/layouts/Footer";
 
 export default {
-  name: "PageContact5",
+  name: "Contact Idi Jakpus",
   layout: "Main",
   components: {
     TopNav,

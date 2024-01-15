@@ -1,74 +1,159 @@
 <template>
-  <div class="challenge section-padding style-5 overflow-hidden">
+  <section class="blog section-padding bg-gray style-1" data-scroll-index="6">
     <div class="container">
-      <div class="row gx-5">
-        <div class="col-lg-4">
-          <div :class="`section-head style-${styleType}`">
-            <h2>
-              {{ rtl ? "" : "Peraturan bidang" }} <br />
-              <span>{{ rtl ? "التحدى" : "Kesehatan" }}</span>
+      <div class="row">
+        <div class="col offset-lg-1">
+          <div class="section-head mb-60">
+            <h6 class="color-main text-uppercase wow fadeInUp">Berkas</h6>
+            <h2 class="wow fadeInUp">
+              Berkas Terbaru
+              <span class="fw-normal">Peraturan Bidang Kesehatan</span>
             </h2>
           </div>
         </div>
-        <div class="col-lg-8">
-          <div class="inf">
-            <div
-              class="text color-666 mb-20"
-              v-for="(item, index) in data"
-              :key="index.id"
+      </div>
+      <div class="content">
+        <div class="blog_slider">
+          <swiper class="swiper-container" :options="swiperOptions">
+            <swiper-slide
+              v-for="(peraturan_bidang_kesehatan, index) in data"
+              :key="index"
             >
-              {{
-                rtl
-                  ? 'قم بإنشاء موقع ويب غير تقليدي ولكنه سهل الاستخدام - مبتكر ، بتصميم نظيف وبسيط يتواصل ويعرض محتوى الوسائط المتعددة. الموقع الذي ينشر الرسالة: "إنها قصص حبك.”'
-                  : item.article_title
-              }}
-            </div>
-            <ul class="color-000">
-              <li
-                class="d-flex mb-10"
-                v-for="(item, index) in data"
-                :key="index.id"
+              <div
+                class="blog_box"
+                @mousemove="showDetails"
+                @mouseleave="hideDetails"
               >
-                <div v-html="item.article_body"></div>
-              </li>
-            </ul>
-            <p>{{ "saat ini data tidak tersedia" }}</p>
-          </div>
+                <div class="tags">
+                  <a href="#">{{
+                    peraturan_bidang_kesehatan.document_category
+                  }}</a>
+                </div>
+                <div class="img">
+                  <img :src="imgHandler(peraturan_bidang_kesehatan)" alt="" />
+                </div>
+                <div class="info">
+                  <h6>
+                    <a
+                      :href="peraturan_bidang_kesehatan.document_file"
+                      target="_blank"
+                      >{{ peraturan_bidang_kesehatan.document_title }}</a
+                    >
+                  </h6>
+                  <div class="auther">
+                    <span>
+                      <i class="bi bi-tags"></i>
+                      <small>
+                        <a href="#" class="me-1">{{ "Berkas" }}</a>
+                      </small>
+                    </span>
+                    <span>
+                      <i class="bi bi-calendar2"></i>
+                      <small
+                        ><a href="#">{{
+                          peraturan_bidang_kesehatan.created_at
+                        }}</a></small
+                      >
+                    </span>
+                  </div>
+                  <div class="text">
+                    {{ peraturan_bidang_kesehatan.document_title }} [...]
+                  </div>
+                </div>
+              </div>
+            </swiper-slide>
+          </swiper>
+
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
-import apis from "../../../api";
-
+import webinars from "../../../../data/Digital/blog.json";
+import apis from "../../../../src/api";
 export default {
-  props: ["rtl", "styleType"],
   data() {
     return {
+      webinars,
+      swiperOptions: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        speed: 1000,
+        pagination: {
+          el: ".blog_slider .swiper-pagination",
+        },
+        navigation: {
+          nextEl: ".blog_slider .swiper-button-next",
+          prevEl: ".blog_slider .swiper-button-prev",
+        },
+        mousewheel: false,
+        keyboard: true,
+        autoplay: {
+          delay: 4000,
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+          },
+          480: {
+            slidesPerView: 2,
+          },
+          787: {
+            slidesPerView: 2,
+          },
+          991: {
+            slidesPerView: 3,
+          },
+          1200: {
+            slidesPerView: 4,
+          },
+        },
+      },
       peraturanBidangKesehatan: {
         isLoading: false,
         data: null,
       },
     };
   },
-
   mounted() {
     this.getPeraturanBidangKesehatan();
   },
-
   computed: {
     data() {
       return this.peraturanBidangKesehatan.data;
     },
+    imgHandler() {
+      return (item) => {
+        if (item.document_file) {
+          if (item.document_file.includes("https")) {
+            return item.document_file;
+          } else {
+            return require("../../../../static/assets/img/berkasIcon.png");
+          }
+        } else {
+          return require("../../../../static/assets/img/berkasIcon.png");
+        }
+      };
+    },
   },
-
   methods: {
+    showDetails(event) {
+      const detailsEl = event.currentTarget.querySelector(".text");
+      detailsEl.style.display = "block";
+    },
+    hideDetails(event) {
+      const detailsEl = event.currentTarget.querySelector(".text");
+      detailsEl.style.display = "none";
+    },
+
     async getPeraturanBidangKesehatan() {
       try {
         this.peraturanBidangKesehatan.isLoading = true;
-        // const { data } = await apis.layananIdi.ppds();
+        const { data } = await apis.berkas.peraturan_bidang_kesehatan();
         this.peraturanBidangKesehatan.data = data.data;
       } finally {
         this.peraturanBidangKesehatan.isLoading = false;

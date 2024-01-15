@@ -15,22 +15,22 @@
       <div class="content">
         <div class="blog_slider">
           <swiper class="swiper-container" :options="swiperOptions">
-            <swiper-slide v-for="(surat_keputusan, index) in data" :key="index">
+            <swiper-slide v-for="(surat_edaran, index) in data" :key="index">
               <div
                 class="blog_box"
                 @mousemove="showDetails"
                 @mouseleave="hideDetails"
               >
                 <div class="tags">
-                  <a href="#">{{ surat_keputusan.document_category }}</a>
+                  <a href="#">{{ surat_edaran.document_category }}</a>
                 </div>
                 <div class="img">
-                  <img :src="imgHandler(surat_keputusan)" alt="" />
+                  <img :src="imgHandler(surat_edaran)" alt="" />
                 </div>
                 <div class="info">
                   <h6>
-                    <a :href="surat_keputusan.document_file" target="_blank">{{
-                      surat_keputusan.document_title
+                    <a :href="surat_edaran.document_file" target="_blank">{{
+                      surat_edaran.document_title
                     }}</a>
                   </h6>
                   <div class="auther">
@@ -43,12 +43,12 @@
                     <span>
                       <i class="bi bi-calendar2"></i>
                       <small
-                        ><a href="#">{{ surat_keputusan.created_at }}</a></small
+                        ><a href="#">{{ surat_edaran.created_at }}</a></small
                       >
                     </span>
                   </div>
                   <div class="text">
-                    {{ surat_keputusan.document_title }} [...]
+                    {{ surat_edaran.document_title }} [...]
                   </div>
                 </div>
               </div>
@@ -104,18 +104,18 @@ export default {
           },
         },
       },
-      suratKeputusan: {
+      suratEdaran: {
         isLoading: false,
         data: null,
       },
     };
   },
   mounted() {
-    this.getDataSuratKeputusan();
+    this.getDataSuratEdaran();
   },
   computed: {
     data() {
-      return this.suratKeputusan.data;
+      return this.suratEdaran.data;
     },
     imgHandler() {
       return (item) => {
@@ -141,13 +141,13 @@ export default {
       detailsEl.style.display = "none";
     },
 
-    async getDataSuratKeputusan() {
+    async getDataSuratEdaran() {
       try {
-        this.suratKeputusan.isLoading = true;
+        this.suratEdaran.isLoading = true;
         const { data } = await apis.berkas.surat_edaran();
-        this.suratKeputusan.data = data.data;
+        this.suratEdaran.data = data.data;
       } finally {
-        this.suratKeputusan.isLoading = false;
+        this.suratEdaran.isLoading = false;
       }
     },
   },

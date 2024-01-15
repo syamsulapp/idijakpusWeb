@@ -19,7 +19,7 @@ import Screenshots from "../../../src/source/screenshot";
 import Footer from "../../../src/layouts/Footer";
 
 export default {
-  name: "PageSingleProject5",
+  name: "Peraturan_Bidang_Kesehatan",
   layout: "Main",
   components: {
     TopNav,
@@ -30,7 +30,7 @@ export default {
   },
   head() {
     return {
-      titleTemplate: "%s - Anggota Baru",
+      titleTemplate: "%s - Peraturan Bidang Kesehatan",
     };
   },
   mounted() {

@@ -130,12 +130,12 @@ export default {
       return (item) => {
         if (item.document_file) {
           if (item.document_file.includes("https")) {
-            return item.document_file;
+            return require("../../../../static/assets/img/berkasfound.png");
           } else {
-            return require("../../../../static/assets/img/berkasIcon.png");
+            return require("../../../../static/assets/img/berkas_not_found.jpeg");
           }
         } else {
-          return require("../../../../static/assets/img/berkasIcon.png");
+          return require("../../../../static/assets/img/berkas_not_found.jpeg");
         }
       };
     },

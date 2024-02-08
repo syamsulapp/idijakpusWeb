@@ -1,7 +1,7 @@
 # Nuxt dev/build outputs
 .output
 .nuxt
-
+.env
 # Node dependencies
 node_modules
 
@@ -16,7 +16,4 @@ logs
 .DS_Store
 
 # Local env files
-.env.*
-!.env.example
-
 dist.zip

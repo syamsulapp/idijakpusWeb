@@ -26,7 +26,7 @@
                         <NuxtLink
                           :to="`/home/details/${berita.article_permalink}`"
                         >
-                          {{ berita.article_title }}
+                          {{ berita.article_title.substring(0, 18) + "..." }}
                         </NuxtLink>
                       </h2>
                       <p class="fs-13px mt-10 text-light text-info">
@@ -50,8 +50,8 @@
 </template>
 
 <script>
-import slidesRTL from "../../../data/Blog/slides-rtl.json";
-import apis from "../../../src/api";
+import slidesRTL from "@/data/Blog/slides-rtl.json";
+import apis from "@/src/api";
 export default {
   props: ["rtl", "styleType"],
   data() {
@@ -93,10 +93,10 @@ export default {
           if (item.article_img.includes("https")) {
             return item.article_img;
           } else {
-            return require("../../../static/assets/img/no-image.png");
+            return require("@/static/assets/img/no-image.png");
           }
         }
-        return require("../../../static/assets/img/no-image.png");
+        return require("@/static/assets/img/no-image.png");
       };
     },
     data() {

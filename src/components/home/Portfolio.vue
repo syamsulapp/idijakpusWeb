@@ -9,7 +9,7 @@
           <div class="section-head mb-60">
             <h6 class="color-main text-uppercase wow fadeInUp">Kegiatan</h6>
             <h2 class="wow fadeInUp">
-              Kegiatan Terbaru <span class="fw-normal">Idi Jakarta Pusat</span>
+              Terbaru <span class="fw-normal">IDI Jakarta Pusat</span>
             </h2>
           </div>
         </div>
@@ -27,7 +27,7 @@
                     <NuxtLink
                       :to="`/home/details/${kegiatan.article_permalink}`"
                     >
-                      {{ kegiatan.article_title }}
+                      {{ kegiatan.article_title.substring(0, 31) + "..." }}
                     </NuxtLink>
                   </h5>
                   <small class="d-block color-main text-uppercase">
@@ -36,7 +36,7 @@
                     }}</a>
                   </small>
                   <div class="text">
-                    {{ kegiatan.article_title }}
+                    {{ kegiatan.article_publish_datetime }}
                   </div>
                   <div class="tags">
                     <a href="#" class="me-1" :key="i">{{
@@ -59,7 +59,7 @@
 </template>
 
 <script>
-import apis from "../../../src/api";
+import apis from "@/src/api";
 
 export default {
   data() {
@@ -117,10 +117,10 @@ export default {
           if (item.article_img.includes("https")) {
             return item.article_img;
           } else {
-            return require("../../../static/assets/img/no-image.png");
+            return require("@/static/assets/img/no-image.png");
           }
         }
-        return require("../../../static/assets/img/no-image.png");
+        return require("@/static/assets/img/no-image.png");
       };
     },
     data() {

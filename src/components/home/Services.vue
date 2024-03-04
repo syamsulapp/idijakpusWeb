@@ -4,9 +4,9 @@
       <div class="row">
         <div class="col offset-lg-1">
           <div class="section-head mb-60">
-            <h6 class="color-main text-uppercase wow fadeInUp">our services</h6>
+            <h6 class="color-main text-uppercase wow fadeInUp">Pelayanan</h6>
             <h2 class="wow fadeInUp">
-              Pelayanan <span class="fw-normal">Idi Jakarta Pusat</span>
+              IDI <span class="fw-normal">Jakarta Pusat</span>
             </h2>
           </div>
         </div>
@@ -56,7 +56,7 @@
 </template>
 
 <script>
-import services from "../../../data/Digital/services.json";
+import services from "@/data/Digital/services.json";
 
 export default {
   data() {

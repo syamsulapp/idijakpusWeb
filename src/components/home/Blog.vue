@@ -6,8 +6,8 @@
           <div class="section-head mb-60">
             <h6 class="color-main text-uppercase wow fadeInUp">Jadwal KRIP</h6>
             <h2 class="wow fadeInUp">
-              Jadwal Terbaru KRIP
-              <span class="fw-normal">Idi Jakarta Pusat</span>
+              Terbaru
+              <span class="fw-normal">IDI Jakarta Pusat</span>
             </h2>
           </div>
         </div>
@@ -62,8 +62,8 @@
 </template>
 
 <script>
-import blogs from "../../../data/Digital/blog.json";
-import apis from "../../../src/api";
+import blogs from "@/data/Digital/blog.json";
+import apis from "@/src/api";
 export default {
   data() {
     return {
@@ -118,7 +118,7 @@ export default {
       return this.krip.data;
     },
     imgHandler() {
-      return require("../../../static/assets/img/krip.png");
+      return require("@/static/assets/img/krip.png");
     },
   },
   methods: {
@@ -135,7 +135,9 @@ export default {
       try {
         this.krip.isLoading = true;
         const { data } = await apis.home.jadwalKrip();
-        this.krip.data = data.data;
+        if (data.data.length) {
+          this.krip.data = [data.data[0]];
+        }
       } finally {
         this.krip.isLoading = false;
       }

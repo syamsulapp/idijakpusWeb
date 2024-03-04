@@ -117,8 +117,3 @@ export default {
   },
 };
 </script>
-<style>
-h5.text-uppercase {
-  visibility: hidden;
-}
-</style>

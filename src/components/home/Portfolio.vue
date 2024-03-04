@@ -7,7 +7,9 @@
       <div class="row">
         <div class="col offset-lg-1">
           <div class="section-head mb-60">
-            <h6 class="color-main text-uppercase wow fadeInUp">Kegiatan</h6>
+            <h6 class="color-main text-uppercase wow fadeInUp">
+              Konten Kegiatan
+            </h6>
             <h2 class="wow fadeInUp">
               Terbaru <span class="fw-normal">IDI Jakarta Pusat</span>
             </h2>

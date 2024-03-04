@@ -5,7 +5,7 @@
         <div class="col offset-lg-1">
           <div class="section-head mb-60">
             <h6 class="color-main text-uppercase wow fadeInUp">
-              Jadwal Webinar
+              Jadwal Kegiatan
             </h6>
             <h2 class="wow fadeInUp">
               Terbaru

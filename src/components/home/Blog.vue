@@ -15,7 +15,11 @@
       <div class="content">
         <div class="blog_slider">
           <swiper class="swiper-container" :options="swiperOptions">
-            <swiper-slide v-for="(krip, index) in data" :key="index">
+            <swiper-slide
+              style="width: 100%"
+              v-for="(krip, index) in data"
+              :key="index"
+            >
               <div
                 class="blog_box"
                 @mousemove="showDetails"

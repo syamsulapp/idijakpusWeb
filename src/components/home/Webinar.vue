@@ -31,9 +31,13 @@
                 </div>
                 <div class="info">
                   <h6>
-                    <a href="https://m.idijakpus.or.id" target="_blank">{{
-                      webinar.webijadwal_title.substring(0, 30) + "..."
-                    }}</a>
+                    <a
+                      href="https://m.idijakpus.or.id/kegiatan"
+                      target="_blank"
+                      >{{
+                        webinar.webijadwal_title.substring(0, 30) + "..."
+                      }}</a
+                    >
                   </h6>
                   <div class="auther">
                     <span>

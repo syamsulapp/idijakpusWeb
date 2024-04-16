@@ -55,7 +55,7 @@
     </div>
 
     <!-- hide pagination -->
-    <!-- <div
+    <div
       :class="`pagination style-5 color-${styleType} justify-content-center mt-60`"
     >
       <a href="#" class="active">
@@ -84,7 +84,7 @@
           >{{ rtl ? "التالي" : "next" }} <i class="fas fa-chevron-right"></i>
         </span>
       </a>
-    </div> -->
+    </div>
   </div>
 </template>
 
@@ -99,10 +99,10 @@ export default {
           if (item.includes("https")) {
             return item;
           } else {
-            return require("../../../static/assets/img/no-image.png");
+            return require("@/static/assets/img/no-image.png");
           }
         }
-        return require("../../../static/assets/img/no-image.png");
+        return require("@/static/assets/img/no-image.png");
       };
     },
   },

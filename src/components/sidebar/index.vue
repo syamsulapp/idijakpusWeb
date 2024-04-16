@@ -80,7 +80,7 @@
 </template>
 
 <script>
-import apis from "../../api";
+import apis from "@/src/api";
 
 export default {
   props: ["sidebarData", "rtl", "styleType"],
@@ -109,10 +109,10 @@ export default {
           if (item.includes("https")) {
             return item;
           } else {
-            return require("../../../static/assets/img/no-image.png");
+            return require("@/static/assets/img/no-image.png");
           }
         }
-        return require("../../../static/assets/img/no-image.png");
+        return require("@/static/assets/img/no-image.png");
       };
     },
 

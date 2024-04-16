@@ -34,9 +34,9 @@
               :to="`/home/details/${blog.article_permalink}`"
               class="card-title mb-10"
             >
-              {{ blog.article_title }}
+              {{ blog.article_title.substring(0, 40) + "..." }}
             </NuxtLink>
-            <p class="fs-13px color-666">{{ blog.article_permalink }} [...]</p>
+            <p class="fs-13px color-666">{{ blog.article_permalink.substring(0, 40) + "..." }} [...]</p>
             <div
               class="auther-comments d-flex small align-items-center justify-content-between op-9"
             >

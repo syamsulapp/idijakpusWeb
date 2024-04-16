@@ -36,7 +36,7 @@
             <img :src="imgHandler(post.article_img)" alt="" />
           </div>
           <div class="inf">
-            <h6>{{ post.article_title }}</h6>
+            <h6>{{ post.article_title.substring(0, 29) + "..." }}</h6>
             <p>
               {{ post.article_permalink }}
               [...]

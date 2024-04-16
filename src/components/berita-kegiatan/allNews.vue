@@ -28,9 +28,9 @@
 </template>
 
 <script>
-import Blogs from "./blog.vue";
-import BlogSidebar from "../../components/sidebar";
-import apis from "../../api";
+import Blogs from "@/src/components/berita-kegiatan/blog";
+import BlogSidebar from "@/src/components/sidebar";
+import apis from "@/src/api";
 
 export default {
   props: ["rtl", "isWide", "leftSidebar", "styleType"],

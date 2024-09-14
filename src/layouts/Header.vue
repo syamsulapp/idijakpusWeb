@@ -7,7 +7,7 @@
             <div class="info">
               <div class="section-head mb-60">
                 <h6 class="color-main text-uppercase">
-                  Idi Cabang Jakarta Pusat
+                  IDI Cabang Jakarta Pusat
                 </h6>
                 <h2>
                   Pelayanan Terintegrasi Dalam
@@ -15,7 +15,7 @@
                 </h2>
               </div>
               <div class="text">
-                Semua layanan terintegrasi dilakukan kedalam satu aplikasi
+                Semua Layanan Terintegrasi Kedalam Satu Aplikasi
               </div>
               <div class="bttns mt-5">
                 <a
@@ -41,19 +41,19 @@
           </div>
           <div class="col-lg-5 offset-lg-1">
             <div class="img">
-              <img src="/assets/img/header/bannerIdiJakpus.png" alt="" />
+              <img src="@/static/assets/img/simfoniLogo.png" alt="" />
             </div>
           </div>
         </div>
       </div>
     </div>
     <img
-      src="/assets/img/header/head_shape_r.png"
+      src="@/static/assets/img/header/head_shape_r.png"
       alt=""
       class="head-shape-r wow"
     />
     <img
-      src="/assets/img/header/head_shape_l.png"
+      src="@/static/assets/img/header/head_shape_l.png"
       alt=""
       class="head-shape-l wow"
     />
@@ -66,7 +66,7 @@
 </template>
 
 <script>
-import ModalVideo from "../../src/source/Video.vue";
+import ModalVideo from "@/src/source/Video.vue";
 
 export default {
   components: {

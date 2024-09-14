@@ -36,7 +36,7 @@
             <img :src="imgHandler(post.article_img)" alt="" />
           </div>
           <div class="inf">
-            <h6>{{ post.article_title }}</h6>
+            <h6>{{ post.article_title.substring(0, 29) + "..." }}</h6>
             <p>
               {{ post.article_permalink }}
               [...]
@@ -80,7 +80,7 @@
 </template>
 
 <script>
-import apis from "../../api";
+import apis from "@/src/api";
 
 export default {
   props: ["sidebarData", "rtl", "styleType"],
@@ -109,10 +109,10 @@ export default {
           if (item.includes("https")) {
             return item;
           } else {
-            return require("../../../static/assets/img/no-image.png");
+            return require("@/static/assets/img/no-image.png");
           }
         }
-        return require("../../../static/assets/img/no-image.png");
+        return require("@/static/assets/img/no-image.png");
       };
     },
 

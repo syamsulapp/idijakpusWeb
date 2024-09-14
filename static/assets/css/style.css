@@ -7758,6 +7758,7 @@ header.style-15 {
 .blog.style-1 .content .blog_box {
   position: relative;
   border-radius: 10px;
+  width: 1000px;
   overflow: hidden; }
   .blog.style-1 .content .blog_box .img {
     height: 350px;

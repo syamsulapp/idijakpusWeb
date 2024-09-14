@@ -12,7 +12,7 @@
                 <div class="row">
                   <div class="col-lg-6">
                     <div class="cont">
-                      <small class="date small mb-20">
+                      <small class="date small mb-25">
                         <a
                           href="#"
                           class="text-uppercase border-end brd-gray pe-3 me-3"
@@ -22,16 +22,16 @@
                         >{{ rtl ? "موعد النشر" : "Posted on" }}
                         <a href="#">{{ berita.article_publish_datetime }}</a>
                       </small>
-                      <h2 class="title">
+                      <h5 class="text-uppercase border-end brd-gray pe-3 me-3">
                         <NuxtLink
                           :to="`/home/details/${berita.article_permalink}`"
                         >
-                          {{ berita.article_title }}
+                          {{ berita.article_title.substring(0, 18) + "..." }}
                         </NuxtLink>
-                      </h2>
-                      <p class="fs-13px mt-10 text-light text-info">
+                      </h5>
+                      <!-- <p class="fs-13px mt-10 text-light text-info">
                         {{ berita.article_category }} [...]
-                      </p>
+                      </p> -->
                     </div>
                   </div>
                 </div>
@@ -50,8 +50,8 @@
 </template>
 
 <script>
-import slidesRTL from "../../../data/Blog/slides-rtl.json";
-import apis from "../../../src/api";
+import slidesRTL from "@/data/Blog/slides-rtl.json";
+import apis from "@/src/api";
 export default {
   props: ["rtl", "styleType"],
   data() {
@@ -93,10 +93,10 @@ export default {
           if (item.article_img.includes("https")) {
             return item.article_img;
           } else {
-            return require("../../../static/assets/img/no-image.png");
+            return require("@/static/assets/img/no-image.png");
           }
         }
-        return require("../../../static/assets/img/no-image.png");
+        return require("@/static/assets/img/no-image.png");
       };
     },
     data() {

@@ -37,7 +37,7 @@
               </small>
               <h5 class="fw-bold mt-10 title">
                 <NuxtLink :to="`/home/details/${post.article_permalink}`">
-                  {{ post.article_title }}
+                  {{ post.article_title.substring(0, 18) + "..." }}
                 </NuxtLink>
               </h5>
               <p class="small mt-2 op-8 fs-10px">
@@ -61,7 +61,7 @@
 </template>
 
 <script>
-import apis from "../../api";
+import apis from "@/src/api";
 
 export default {
   props: ["rtl", "styleType"],
@@ -81,10 +81,10 @@ export default {
           if (item.includes("https")) {
             return item;
           } else {
-            return require("../../../static/assets/img/no-image.png");
+            return require("@/static/assets/img/no-image.png");
           }
         }
-        return require("../../../static/assets/img/no-image.png");
+        return require("@/static/assets/img/no-image.png");
       };
     },
     postsData() {

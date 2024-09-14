@@ -5,11 +5,11 @@
         <div class="col offset-lg-1">
           <div class="section-head mb-60">
             <h6 class="color-main text-uppercase wow fadeInUp">
-              Jadwal Webinar
+              Jadwal Kegiatan
             </h6>
             <h2 class="wow fadeInUp">
-              Jadwal Terbaru Webinar
-              <span class="fw-normal">Idi Jakarta Pusat</span>
+              Terbaru
+              <span class="fw-normal">IDI Jakarta Pusat</span>
             </h2>
           </div>
         </div>
@@ -31,9 +31,13 @@
                 </div>
                 <div class="info">
                   <h6>
-                    <a href="https://m.idijakpus.or.id" target="_blank">{{
-                      webinar.webijadwal_title
-                    }}</a>
+                    <a
+                      href="https://m.idijakpus.or.id/kegiatan"
+                      target="_blank"
+                      >{{
+                        webinar.webijadwal_title.substring(0, 30) + "..."
+                      }}</a
+                    >
                   </h6>
                   <div class="auther">
                     <span>
@@ -64,12 +68,10 @@
 </template>
 
 <script>
-import webinars from "../../../data/Digital/blog.json";
-import apis from "../../../src/api";
+import apis from "@/src/api";
 export default {
   data() {
     return {
-      webinars,
       swiperOptions: {
         slidesPerView: 3,
         spaceBetween: 30,
@@ -123,10 +125,10 @@ export default {
           if (item.webijadwal_img.includes("https")) {
             return item.webijadwal_img;
           } else {
-            return require("../../../static/assets/img/no-image.png");
+            return require("@/static/assets/img/no-image.png");
           }
         } else {
-          return require("../../../static/assets/img/no-image.png");
+          return require("@/static/assets/img/no-image.png");
         }
       };
     },
@@ -145,7 +147,9 @@ export default {
       try {
         this.webinar.isLoading = true;
         const { data } = await apis.home.webinar();
-        this.webinar.data = data.data;
+        if (data.data.length) {
+          this.webinar.data = [data.data[0]];
+        }
       } finally {
         this.webinar.isLoading = false;
       }

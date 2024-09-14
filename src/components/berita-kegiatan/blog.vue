@@ -34,9 +34,9 @@
               :to="`/home/details/${blog.article_permalink}`"
               class="card-title mb-10"
             >
-              {{ blog.article_title }}
+              {{ blog.article_title.substring(0, 40) + "..." }}
             </NuxtLink>
-            <p class="fs-13px color-666">{{ blog.article_permalink }} [...]</p>
+            <p class="fs-13px color-666">{{ blog.article_permalink.substring(0, 40) + "..." }} [...]</p>
             <div
               class="auther-comments d-flex small align-items-center justify-content-between op-9"
             >
@@ -55,7 +55,7 @@
     </div>
 
     <!-- hide pagination -->
-    <!-- <div
+    <div
       :class="`pagination style-5 color-${styleType} justify-content-center mt-60`"
     >
       <a href="#" class="active">
@@ -84,7 +84,7 @@
           >{{ rtl ? "التالي" : "next" }} <i class="fas fa-chevron-right"></i>
         </span>
       </a>
-    </div> -->
+    </div>
   </div>
 </template>
 
@@ -99,10 +99,10 @@ export default {
           if (item.includes("https")) {
             return item;
           } else {
-            return require("../../../static/assets/img/no-image.png");
+            return require("@/static/assets/img/no-image.png");
           }
         }
-        return require("../../../static/assets/img/no-image.png");
+        return require("@/static/assets/img/no-image.png");
       };
     },
   },

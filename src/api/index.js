@@ -1,10 +1,10 @@
-import home from "./module/home";
-import beritaKegiatan from "./module/beritaKegiatan";
-import layananIdi from "./module/layananIdi";
-import galeri from "./module/galeri";
-import about from "./module/about";
-import contact from "./module/contact";
-import berkas from "./module/berkas";
+import home from "@/src/api/module/home";
+import beritaKegiatan from "@/src/api/module/beritaKegiatan";
+import layananIdi from "@/src/api/module/layananIdi";
+import galeri from "@/src/api/module/galeri";
+import about from "@/src/api/module/about";
+import contact from "@/src/api/module/contact";
+import berkas from "@/src/api/module/berkas";
 
 export default {
   home,

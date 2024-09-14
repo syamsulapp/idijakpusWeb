@@ -12,16 +12,16 @@
 </template>
 
 <script>
-import navbarScrollEffect from "../../common/navbarScrollEffect";
-import TopNav from "../../src/layouts/TopNav";
-import Navbar from "../../src/layouts/Navbar";
-import BlogSlider from "../../src/components/berita-kegiatan/BlogSlider.vue";
-import PopularPosts from "../../src/components/berita-kegiatan/popularPost.vue";
-import AllNews from "../../src/components/berita-kegiatan/allNews.vue";
-import Footer from "../../src/layouts/Footer";
+import navbarScrollEffect from "@/common/navbarScrollEffect";
+import TopNav from "@/src/layouts/TopNav";
+import Navbar from "@/src/layouts/Navbar";
+import BlogSlider from "@/src/components/berita-kegiatan/BlogSlider.vue";
+import PopularPosts from "@/src/components/berita-kegiatan/popularPost.vue";
+import AllNews from "@/src/components/berita-kegiatan/allNews.vue";
+import Footer from "@/src/layouts/Footer";
 
 export default {
-  name: "PageBlog5",
+  name: "BeritaKegiatan",
   layout: "Main",
   components: {
     TopNav,

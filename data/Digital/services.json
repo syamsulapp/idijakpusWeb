@@ -10,14 +10,14 @@
     "title": "Izin Praktik",
     "number": "02",
     "icon": "/assets/img/icons/serv_icons/2.png",
-    "text": "Rekomendasi Izin Praktik.",
+    "text": "Rekomendasi Izin Praktik. pengajuan izin membuka tempat praktik dokter di jakarta pusat",
     "tags": ["Izin Praktik"]
   },
   {
     "title": "Keanggotaan",
     "number": "03",
     "icon": "/assets/img/icons/serv_icons/3.png",
-    "text": "Daftar menjadi anggota idi jakpus dengan mengisi form yang ada di aplikasi simfoni.",
+    "text": "Daftar menjadi anggota IDI Jakarta Pusat dengan mengisi form yang ada di aplikasi simfoni.",
     "tags": ["Registrasi", "Mutasi Masuk", "Mutasi Keluar"]
   },
   {
@@ -38,7 +38,7 @@
     "title": "Studi Kasus",
     "number": "06",
     "icon": "/assets/img/icons/serv_icons/6.png",
-    "text": "berisikan forum terkait pelayanan idi jakarta pusat.",
+    "text": "berisikan forum terkait pelayanan IDI jakarta pusat.",
     "tags": ["Forum"]
   }
 ]

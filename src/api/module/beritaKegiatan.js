@@ -1,4 +1,4 @@
-import resource from "../handler";
+import resource from "@/src/api/handler";
 
 const endpoint = {
   beritaKegiatan: {
